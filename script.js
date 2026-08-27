@@ -362,16 +362,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* --- 8. Read More Buttons Popup --- */
+    /* --- 8. News Cards & Read More Navigation to Publication --- */
+    const newsCardsWithHref = document.querySelectorAll('.news-card[data-href]');
+    newsCardsWithHref.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // If user clicked directly on an anchor link inside, let standard link work
+            if (e.target.closest('a')) return;
+            const href = card.getAttribute('data-href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
+
     const readMoreBtns = document.querySelectorAll('.read-more-btn');
     readMoreBtns.forEach(btn => {
+        // If it's an anchor tag with href, allow native navigation
+        if (btn.tagName.toLowerCase() === 'a' && btn.getAttribute('href')) {
+            return;
+        }
+
         btn.addEventListener('click', (e) => {
-            e.preventDefault();
             const card = btn.closest('.news-card');
-            if (card) {
-                const title = card.querySelector('.news-title')?.textContent || 'Berita AI Academy';
-                const excerpt = card.querySelector('.news-excerpt')?.textContent || 'Informasi lengkap mengenai berita dan event akademi.';
-                alert(`${title}\n\n${excerpt}`);
+            if (!card) return;
+
+            const dataHref = card.getAttribute('data-href') || btn.getAttribute('data-href');
+            if (dataHref) {
+                window.location.href = dataHref;
+                return;
+            }
+
+            // If we are already on publikasi.html:
+            const isPublikasiPage = window.location.pathname.includes('publikasi.html');
+            if (!isPublikasiPage) {
+                window.location.href = 'publikasi.html#berita';
+                return;
+            }
+
+            const btnText = btn.textContent.trim().toLowerCase();
+            const title = card.querySelector('.news-title')?.textContent || 'Publikasi AI Academy';
+            const contactModal = document.getElementById('contactModal');
+            const contactMessage = document.getElementById('contactMessage');
+
+            // If it's a registration or summit CTA on publikasi page, open contact/registration modal
+            if (btnText.includes('daftar') || btnText.includes('ikuti') || btnText.includes('summit')) {
+                if (contactModal) {
+                    if (contactMessage) {
+                        contactMessage.value = `Saya berminat mendaftar / informasi untuk: ${title}. Mohon petunjuk jadwal dan alur pendaftarannya.`;
+                    }
+                    contactModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    window.location.href = 'pendaftaran.html';
+                }
+            } else {
+                // Smoothly highlight card or show details
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                card.style.borderColor = 'var(--primary-blue)';
+                setTimeout(() => {
+                    card.style.borderColor = '';
+                }, 1500);
             }
         });
     });

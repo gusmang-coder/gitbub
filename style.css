@@ -110,7 +110,15 @@ button, input, select, textarea {
 .brand-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    text-decoration: none;
+    flex-shrink: 0;
+    margin-right: 16px;
+    transition: transform 0.2s ease;
+}
+
+.brand-logo:hover {
+    transform: translateY(-1px);
 }
 
 .logo-badge {
@@ -127,45 +135,61 @@ button, input, select, textarea {
 }
 
 .brand-logo-img, .logo-img {
-    height: 46px;
-    max-height: 46px;
-    width: auto;
+    height: 44px;
+    width: 44px;
+    max-height: 44px;
     object-fit: contain;
-    border-radius: 6px;
-    transition: var(--transition);
+    border-radius: 10px;
+    background: #FFFFFF;
+    padding: 3px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-logo:hover .brand-logo-img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4), 0 0 0 1px rgba(56, 189, 248, 0.4);
 }
 
 .brand-text {
     display: flex;
     flex-direction: column;
-}
-
-.brand-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    letter-spacing: 0.3px;
+    justify-content: center;
+    white-space: nowrap;
     line-height: 1.2;
 }
 
-.brand-subtitle {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accent-cyan);
-    letter-spacing: 0.5px;
+.brand-title {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    line-height: 1.15;
     text-transform: uppercase;
+}
+
+.brand-subtitle {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent-cyan, #38BDF8);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-top: 2px;
 }
 
 /* --- Desktop Nav Links --- */
 .nav-menu {
     display: flex;
     align-items: center;
+    flex: 1;
+    justify-content: center;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .nav-item {
@@ -175,12 +199,14 @@ button, input, select, textarea {
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 10px 14px;
-    font-size: 0.92rem;
+    gap: 5px;
+    padding: 8px 11px;
+    font-size: 0.88rem;
     font-weight: 600;
     color: #CBD5E1;
     border-radius: var(--radius-sm);
+    white-space: nowrap;
+    transition: var(--transition);
 }
 
 .nav-link:hover, .nav-item.active .nav-link {
@@ -1102,17 +1128,48 @@ button, input, select, textarea {
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
 }
 
 .news-card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg, 0 16px 32px rgba(15, 23, 42, 0.12));
+    border-color: rgba(37, 99, 235, 0.3);
 }
 
 .news-thumb {
     position: relative;
-    height: 180px;
+    height: 200px;
+    overflow: hidden;
+    background-color: #0F172A;
+}
+
+.news-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.news-card:hover .news-thumb-img {
+    transform: scale(1.08);
+}
+
+.news-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.25) 0%, rgba(15, 23, 42, 0.05) 50%, rgba(15, 23, 42, 0.5) 100%);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.news-card:hover .news-thumb-overlay {
+    opacity: 0.8;
 }
 
 .thumb-placeholder {
@@ -1133,12 +1190,15 @@ button, input, select, textarea {
     position: absolute;
     top: 14px;
     left: 14px;
-    padding: 4px 12px;
+    padding: 5px 14px;
     font-size: 0.75rem;
     font-weight: 800;
     border-radius: var(--radius-pill);
     color: #FFFFFF;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .badge-blue { background: var(--primary-blue); }
@@ -1166,6 +1226,16 @@ button, input, select, textarea {
     color: var(--text-dark);
     margin-bottom: 10px;
     line-height: 1.35;
+    transition: color 0.2s ease;
+}
+
+.news-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.news-card:hover .news-title {
+    color: var(--primary-blue);
 }
 
 .news-excerpt {
@@ -1173,6 +1243,7 @@ button, input, select, textarea {
     color: var(--text-main);
     margin-bottom: 20px;
     flex: 1;
+    line-height: 1.6;
 }
 
 .read-more-btn {
@@ -1182,13 +1253,27 @@ button, input, select, textarea {
     font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     cursor: pointer;
     align-self: flex-start;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    transition: all 0.2s ease;
 }
 
-.read-more-btn:hover {
+.read-more-btn i {
+    transition: transform 0.2s ease;
+}
+
+.read-more-btn:hover,
+.news-card:hover .read-more-btn {
     color: var(--primary-dark);
+}
+
+.read-more-btn:hover i,
+.news-card:hover .read-more-btn i {
+    transform: translateX(4px);
 }
 
 /* ==========================================
@@ -1437,6 +1522,20 @@ button, input, select, textarea {
 /* ==========================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================== */
+@media (max-width: 1080px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .btn-login {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -1482,12 +1581,8 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
+    .nav-actions .btn-contact {
         display: none;
-    }
-
-    .hamburger-btn {
-        display: block;
     }
 
     .hero-title {
