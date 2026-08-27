@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Peserta Baru & Beasiswa - AI Global Academy Denpasar</title>
+    <meta name="description" content="Info Penerimaan Peserta Baru, Syarat Beasiswa Riset AI, dan Form Pendaftaran Online AI & Education Global Academy Denpasar.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo" id="brandLogo">
+                <img src="Img/Logo.png" alt="AI & Education Global Academy Logo" class="brand-logo-img">
+                <div class="brand-text">
+                    <span class="brand-title">AI & EDUCATION</span>
+                    <span class="brand-subtitle">Global Academy Denpasar</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="kelas.html" class="nav-link">Kelas / Programs <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kelas.html#online"><i class="fas fa-laptop-code"></i> Online Class <span class="dropdown-tag tag-online">Virtual Lab</span></a></li>
+                            <li><a href="kelas.html#offline"><i class="fas fa-building-user"></i> Offline Class <span class="dropdown-tag tag-offline">Denpasar Campus</span></a></li>
+                            <li><a href="kelas.html#schedules"><i class="fas fa-calendar-alt"></i> Jadwal Pelajaran / Schedules</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="profil.html" class="nav-link">Profil <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profil.html#visi-misi"><i class="fas fa-bullseye"></i> Visi & Misi AI Academy</a></li>
+                            <li><a href="profil.html#sejarah"><i class="fas fa-landmark"></i> Tentang Kampus Denpasar</a></li>
+                            <li><a href="profil.html#dewan-pakar"><i class="fas fa-sitemap"></i> Dewan Pakar & Researchers</a></li>
+                            <li><a href="profil.html#fasilitas"><i class="fas fa-server"></i> Fasilitas Supercomputer & Lab</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="direktori.html" class="nav-link">Direktori <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="direktori.html#guru"><i class="fas fa-user-tie"></i> Data Instruktur & Mentors</a></li>
+                            <li><a href="direktori.html#siswa"><i class="fas fa-user-graduate"></i> Network Peserta / Alumni</a></li>
+                            <li><a href="direktori.html#mitra"><i class="fas fa-handshake"></i> Mitra Industri Global</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="publikasi.html" class="nav-link">Publikasi <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="publikasi.html#berita"><i class="fas fa-newspaper"></i> Berita AI & EdTech</a></li>
+                            <li><a href="publikasi.html#pengumuman"><i class="fas fa-bullhorn"></i> Seminar & Workshop</a></li>
+                            <li><a href="publikasi.html#agenda"><i class="fas fa-calendar-check"></i> Event AI Summit Bali</a></li>
+                            <li><a href="publikasi.html#galeri"><i class="fas fa-images"></i> Galeri Hackathon</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a href="pendaftaran.html" class="nav-link">Pendaftaran <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pendaftaran.html#info-ppdb"><i class="fas fa-info-circle"></i> Info Penerimaan Peserta</a></li>
+                            <li><a href="pendaftaran.html#syarat"><i class="fas fa-file-signature"></i> Syarat & Beasiswa</a></li>
+                            <li><a href="pendaftaran.html#alur"><i class="fas fa-route"></i> Alur Pendaftaran Online</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-login" id="openLoginBtn">
+                    <i class="far fa-user"></i> Portal Student
+                </button>
+                <button class="btn btn-contact" id="openContactBtn">
+                    Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="drawer-brand" style="display: flex; align-items: center; gap: 10px;">
+                <img src="Img/Logo.png" alt="AI Academy Logo" class="brand-logo-img" style="height: 38px;">
+                <div>
+                    <span class="brand-title" style="display: block; font-size: 0.95rem;">AI & EDUCATION</span>
+                    <span class="brand-subtitle" style="font-size: 0.75rem;">Global Academy</span>
+                </div>
+            </div>
+            <button class="drawer-close" id="drawerClose">&times;</button>
+        </div>
+        <div class="drawer-content" id="mobileDrawerContent"></div>
+    </div>
+
+    <!-- Subpage Hero Banner -->
+    <section class="page-hero">
+        <div class="section-container">
+            <h1 class="page-hero-title">Pendaftaran Peserta & Beasiswa AI</h1>
+            <p class="page-hero-subtitle">Bergabunglah dalam ekosistem akademi kecerdasan buatan terkemuka. Pendaftaran dibuka untuk jalur Reguler dan Beasiswa Riset Industri.</p>
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Pendaftaran</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Admission Section -->
+    <section class="section-padding" id="info-ppdb" style="background: #FFFFFF;">
+        <div class="section-container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="section-tag">PENERIMAAN 2026</span>
+                <h2 class="section-title">Informasi Penerimaan Peserta (PPDB AI Academy)</h2>
+            </div>
+
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-box"><i class="fas fa-calendar-check"></i></div>
+                    <h3 class="feature-title">Gelombang Pendaftaran</h3>
+                    <p class="feature-desc">Pendaftaran Gelombang I dibuka hingga 30 Agustus 2026. Kuota terbatas 30 peserta per angkatan untuk menjaga kualitas pengajaran lab.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-box"><i class="fas fa-laptop-house"></i></div>
+                    <h3 class="feature-title">Pilihan Program</h3>
+                    <p class="feature-desc">Peserta dapat memilih Online Virtual Lab Class atau Offline Campus Denpasar sesuai domisili dan fleksibilitas waktu.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-box"><i class="fas fa-award"></i></div>
+                    <h3 class="feature-title">Beasiswa Talenta AI</h3>
+                    <p class="feature-desc">Tersedia Beasiswa Potongan 50% - 100% dari mitra industri untuk pendidik, mahasiswa berprestasi, dan peneliti EdTech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alur Pendaftaran Step by Step -->
+    <section class="section-padding" id="alur" style="background: var(--bg-gray);">
+        <div class="section-container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="section-tag">LANGKAH PENDAFTARAN</span>
+                <h2 class="section-title">Alur Pendaftaran Online</h2>
+            </div>
+
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-box" style="background: var(--primary-blue); color: #FFFFFF;">1</div>
+                    <h3 class="feature-title">Isi Form Online</h3>
+                    <p class="feature-desc">Lengkapi formulir pendaftaran peserta baru secara lengkap di bagian bawah halaman ini.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-box" style="background: var(--primary-blue); color: #FFFFFF;">2</div>
+                    <h3 class="feature-title">Verifikasi Dokumen</h3>
+                    <p class="feature-desc">Tim sekretariat pendaftaran akan memverifikasi identitas dan minat program dalam 1x24 jam.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-box" style="background: var(--primary-blue); color: #FFFFFF;">3</div>
+                    <h3 class="feature-title">Konfirmasi & Orientasi</h3>
+                    <p class="feature-desc">Dapatkan akun Portal AI Academy Student dan ikuti sesi orientasi onboarding kelas pertama Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Registration Form -->
+    <section class="section-padding" id="form-pendaftaran" style="background: #FFFFFF;">
+        <div class="section-container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="section-tag">FORMULIR PENDAFTARAN</span>
+                <h2 class="section-title">Formulir Pendaftaran Online Peserta</h2>
+            </div>
+
+            <div class="feature-card" style="padding: 40px;">
+                <form id="mainRegistrationForm">
+                    <div class="form-group">
+                        <label for="regFullName">Nama Lengkap & Gelar</label>
+                        <input type="text" id="regFullName" placeholder="Contoh: Dr. I Wayan Pratama, M.Pd." required class="form-control">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="regEmail">Alamat Email Active</label>
+                            <input type="email" id="regEmail" placeholder="nama@domain.com" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="regPhone">Nomor WhatsApp</label>
+                            <input type="tel" id="regPhone" placeholder="081234567890" required class="form-control">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="regTrack">Pilihan Kelas / Program</label>
+                            <select id="regTrack" class="form-control">
+                                <option value="online-prompt">Online Class: Prompt Engineering & Gen AI</option>
+                                <option value="online-ml">Online Class: Machine Learning & Python AI</option>
+                                <option value="offline-supercomputer">Offline Class: Supercomputer & Deep Learning</option>
+                                <option value="offline-bootcamp">Offline Class: EdTech Innovation Bootcamp</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="regCategory">Jalur Pendaftaran</label>
+                            <select id="regCategory" class="form-control">
+                                <option value="reguler">Jalur Reguler Umum</option>
+                                <option value="beasiswa-pendidik">Jalur Beasiswa Pendidik / Guru</option>
+                                <option value="beasiswa-mahasiswa">Jalur Beasiswa Mahasiswa AI</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regNotes">Catatan / Latar Belakang Pendidikan & Pengalaman</label>
+                        <textarea id="regNotes" rows="4" placeholder="Tuliskan pengalaman singkat atau motivasi Anda mengikuti kelas kecerdasan buatan..." class="form-control"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-block btn-search" style="padding: 16px; font-size: 1.05rem;">
+                        <i class="fas fa-paper-plane"></i> Kirim Formulir Pendaftaran
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="Img/Logo.png" alt="AI & Education Logo" class="brand-logo-img" style="height: 40px;">
+                        <span>AI & EDUCATION GLOBAL ACADEMY</span>
+                    </div>
+                    <p class="footer-desc">
+                        Akademi unggulan kecerdasan buatan, machine learning, dan teknologi pendidikan global yang berpusat di Denpasar, Bali.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Program & Kelas</h4>
+                    <ul class="footer-menu">
+                        <li><a href="kelas.html#online">Online Class Virtual Lab</a></li>
+                        <li><a href="kelas.html#offline">Offline Class Denpasar</a></li>
+                        <li><a href="kelas.html#schedules">Jadwal & Timetable Kelas</a></li>
+                        <li><a href="direktori.html#guru">Instruktur & Mentors AI</a></li>
+                        <li><a href="publikasi.html#berita">Riset & Jurnal Terpublikasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4 class="footer-heading">Kampus Denpasar</h4>
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Raya Puputan No. 88, Renon, Denpasar Selatan, Kota Denpasar, Bali 80226</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>(0361) 9876543 / 0812-9988-7766</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>admissions@aiacademy-denpasar.ac.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artificial Intelligence and Education Global Academy Denpasar. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <span class="dot">•</span>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-backdrop" id="loginModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-lock"></i> Portal AI Academy Student & Faculty</h3>
+                <button class="modal-close" id="loginClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Email / Student ID / NIP</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" id="username" placeholder="Masukkan ID atau Email Akademi" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Kata Sandi</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="Masukkan Kata Sandi" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">Akses Sistem</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user-tag"></i>
+                            <select id="userRole">
+                                <option value="student">Student / Online Class Participant</option>
+                                <option value="mentor">AI Mentor / Faculty Instructor</option>
+                                <option value="admin">Administrator / Research Director</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-search">Masuk Portal</button>
+                    <div class="modal-footer-links" style="margin-top: 16px; text-align: center; font-size: 0.88rem; color: var(--text-muted);">
+                        <span>Belum punya akun? <a href="register.html" style="color: var(--primary-blue); font-weight: 700;">Daftar Sekarang</a> atau buka <a href="login.html" style="color: var(--primary-blue); font-weight: 700;">Portal Login Penuh</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact / Enrollment Modal -->
+    <div class="modal-backdrop" id="contactModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fas fa-paper-plane"></i> Form Pendaftaran & Informasi Kelas</h3>
+                <button class="modal-close" id="contactClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Nama Lengkap</label>
+                        <input type="text" id="contactName" placeholder="Nama Anda" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email & WhatsApp</label>
+                        <input type="text" id="contactEmail" placeholder="Email / Kontak WA Active" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Program & Jadwal Yang Diminati</label>
+                        <textarea id="contactMessage" rows="4" placeholder="Sebutkan minat Kelas Online / Offline atau pertanyaan Anda..." required class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-search">Kirim Pendaftaran</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('mainRegistrationForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('regFullName').value;
+            alert(`Terima kasih, ${name}! Pendaftaran Anda di AI & Education Global Academy Denpasar telah kami terima. Tim Admissions akan mengonfirmasi via WhatsApp & Email.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
