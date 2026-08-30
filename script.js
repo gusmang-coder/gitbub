@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* --- 2. Mobile Drawer Navigation Toggle --- */
+    /* --- 2. Mobile Drawer Navigation Toggle & Dynamic Menu --- */
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const drawerClose = document.getElementById('drawerClose');
     const mobileDrawer = document.getElementById('mobileDrawer');
@@ -59,8 +59,56 @@ document.addEventListener('DOMContentLoaded', () => {
         const clonedMenu = navMenu.cloneNode(true);
         mobileDrawerContent.appendChild(clonedMenu);
 
-        // Close drawer when clicking any nav link inside mobile drawer
-        const drawerNavLinks = mobileDrawerContent.querySelectorAll('a');
+        // Enhance dropdown items in mobile drawer with interactive accordion
+        const drawerDropdownItems = mobileDrawerContent.querySelectorAll('.nav-item.dropdown');
+        drawerDropdownItems.forEach(item => {
+            const mainLink = item.querySelector('.nav-link');
+            if (mainLink) {
+                mainLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const isOpen = item.classList.contains('open');
+                    // Optional: close other open dropdowns for accordion effect
+                    drawerDropdownItems.forEach(other => {
+                        if (other !== item) other.classList.remove('open');
+                    });
+                    item.classList.toggle('open', !isOpen);
+                });
+            }
+        });
+
+        // Add Sign In and Registration CTA actions inside Mobile Drawer
+        const drawerActions = document.createElement('div');
+        drawerActions.className = 'drawer-auth-actions';
+        drawerActions.innerHTML = `
+            <button class="btn-drawer-login" id="mobileDrawerLoginBtn">
+                <i class="far fa-user"></i> Portal Student (Sign In)
+            </button>
+            <a href="pendaftaran.html" class="btn-drawer-register" id="mobileDrawerRegisterBtn">
+                <i class="fas fa-user-plus"></i> Daftar Sekarang
+            </a>
+        `;
+        mobileDrawerContent.appendChild(drawerActions);
+
+        // Bind Mobile Sign In Button
+        const mobileDrawerLoginBtn = document.getElementById('mobileDrawerLoginBtn');
+        if (mobileDrawerLoginBtn) {
+            mobileDrawerLoginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeMobileDrawer();
+                const loginModal = document.getElementById('loginModal');
+                if (loginModal) {
+                    setTimeout(() => {
+                        loginModal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }, 250);
+                } else {
+                    window.location.href = 'login.html';
+                }
+            });
+        }
+
+        // Close drawer when clicking any standard leaf link inside mobile drawer
+        const drawerNavLinks = mobileDrawerContent.querySelectorAll('.dropdown-menu a, .nav-item:not(.dropdown) a');
         drawerNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 closeMobileDrawer();
@@ -362,72 +410,244 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* --- 8. News Cards & Read More Navigation to Publication --- */
-    const newsCardsWithHref = document.querySelectorAll('.news-card[data-href]');
-    newsCardsWithHref.forEach(card => {
-        card.addEventListener('click', (e) => {
-            // If user clicked directly on an anchor link inside, let standard link work
-            if (e.target.closest('a')) return;
-            const href = card.getAttribute('data-href');
-            if (href) {
-                window.location.href = href;
-            }
-        });
-    });
+    /* --- 8. Publication Interactive Dropdown Accordions & News Handling --- */
+    const allNewsCards = document.querySelectorAll('.news-card');
 
-    const readMoreBtns = document.querySelectorAll('.read-more-btn');
-    readMoreBtns.forEach(btn => {
-        // If it's an anchor tag with href, allow native navigation
-        if (btn.tagName.toLowerCase() === 'a' && btn.getAttribute('href')) {
-            return;
+    allNewsCards.forEach(card => {
+        const dropdownBtn = card.querySelector('.read-more-btn');
+        const fullDetails = card.querySelector('.news-full-details');
+        const originalBtnText = dropdownBtn ? dropdownBtn.querySelector('span')?.textContent || dropdownBtn.textContent.trim() : 'Baca Selengkapnya';
+
+        // Toggle function for expanding/collapsing article details
+        function toggleArticle(e) {
+            // Do not toggle if clicking directly on a CTA link, form element, or button inside full-details
+            if (e && e.target.closest('.news-cta-btn, .modal-backdrop, form, input, select, textarea')) {
+                return;
+            }
+
+            // If card has href and NO full-details (e.g. basic redirect card), allow standard navigation
+            if (!fullDetails && card.hasAttribute('data-href')) {
+                window.location.href = card.getAttribute('data-href');
+                return;
+            }
+
+            if (!fullDetails) return;
+
+            const isExpanded = card.classList.contains('expanded');
+            
+            // Toggle expanded class
+            card.classList.toggle('expanded', !isExpanded);
+
+            // Update button text and chevron
+            if (dropdownBtn) {
+                const textSpan = dropdownBtn.querySelector('span');
+                if (!isExpanded) {
+                    if (textSpan) textSpan.textContent = 'Tutup Deskripsi';
+                    else dropdownBtn.innerHTML = '<span>Tutup Deskripsi</span> <i class="fas fa-chevron-down dropdown-arrow"></i>';
+                } else {
+                    if (textSpan) textSpan.textContent = originalBtnText;
+                    else dropdownBtn.innerHTML = `<span>${originalBtnText}</span> <i class="fas fa-chevron-down dropdown-arrow"></i>`;
+                }
+            }
+
+            // Smoothly scroll to keep card visible if opening on mobile
+            if (!isExpanded && window.innerWidth < 768) {
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
         }
 
-        btn.addEventListener('click', (e) => {
-            const card = btn.closest('.news-card');
-            if (!card) return;
+        // Bind dropdown button click
+        if (dropdownBtn) {
+            dropdownBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleArticle(e);
+            });
+        }
 
-            const dataHref = card.getAttribute('data-href') || btn.getAttribute('data-href');
-            if (dataHref) {
-                window.location.href = dataHref;
-                return;
-            }
+        // Bind card header/body click to also toggle accordion if fullDetails exists
+        if (fullDetails) {
+            card.addEventListener('click', (e) => {
+                // If clicked an anchor with valid href that isn't javascript:void, let it navigate
+                if (e.target.closest('a:not(.article-dropdown-btn)')) return;
+                toggleArticle(e);
+            });
+        }
 
-            // If we are already on publikasi.html:
-            const isPublikasiPage = window.location.pathname.includes('publikasi.html');
-            if (!isPublikasiPage) {
-                window.location.href = 'publikasi.html#berita';
-                return;
-            }
-
-            const btnText = btn.textContent.trim().toLowerCase();
-            const title = card.querySelector('.news-title')?.textContent || 'Publikasi AI Academy';
-            const contactModal = document.getElementById('contactModal');
-            const contactMessage = document.getElementById('contactMessage');
-
-            // If it's a registration or summit CTA on publikasi page, open contact/registration modal
-            if (btnText.includes('daftar') || btnText.includes('ikuti') || btnText.includes('summit')) {
+        // Handle inner CTA buttons inside full details (e.g. "Daftar Beasiswa Ini", "Ikuti Workshop")
+        const innerCtaBtns = card.querySelectorAll('.news-cta-btn');
+        innerCtaBtns.forEach(cta => {
+            cta.addEventListener('click', (e) => {
+                const href = cta.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript:')) {
+                    return; // native link to pendaftaran.html
+                }
+                e.preventDefault();
+                e.stopPropagation();
+                const title = card.querySelector('.news-title')?.textContent.trim() || 'Publikasi AI Academy';
+                const contactModal = document.getElementById('contactModal');
+                const contactMessage = document.getElementById('contactMessage');
                 if (contactModal) {
                     if (contactMessage) {
-                        contactMessage.value = `Saya berminat mendaftar / informasi untuk: ${title}. Mohon petunjuk jadwal dan alur pendaftarannya.`;
+                        contactMessage.value = `Saya berminat mendaftar / informasi untuk: ${title}. Mohon informasi jadwal dan panduan pendaftarannya.`;
                     }
                     contactModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
                 } else {
                     window.location.href = 'pendaftaran.html';
                 }
-            } else {
-                // Smoothly highlight card or show details
-                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                card.style.borderColor = 'var(--primary-blue)';
-                setTimeout(() => {
-                    card.style.borderColor = '';
-                }, 1500);
-            }
+            });
         });
     });
 
 
-    /* --- 9. Active Page Highlight & FAQ Accordion --- */
+    /* --- 9. Feature Card Accordions (Partners & Admission Tracks) --- */
+    const allFeatureCards = document.querySelectorAll('.feature-card');
+
+    allFeatureCards.forEach(card => {
+        const dropdownBtn = card.querySelector('.feature-dropdown-btn');
+        const fullDetails = card.querySelector('.feature-full-details');
+        if (!fullDetails) return;
+
+        const originalBtnText = dropdownBtn ? dropdownBtn.querySelector('span')?.textContent || dropdownBtn.textContent.trim() : 'Baca Selengkapnya';
+
+        function toggleFeature(e) {
+            if (e && e.target.closest('a, button:not(.feature-dropdown-btn), form, input, select, textarea')) {
+                return;
+            }
+
+            const isExpanded = card.classList.contains('expanded');
+            card.classList.toggle('expanded', !isExpanded);
+
+            if (dropdownBtn) {
+                const textSpan = dropdownBtn.querySelector('span');
+                if (!isExpanded) {
+                    if (textSpan) textSpan.textContent = 'Tutup Deskripsi';
+                    else dropdownBtn.innerHTML = '<span>Tutup Deskripsi</span> <i class="fas fa-chevron-down dropdown-arrow"></i>';
+                } else {
+                    if (textSpan) textSpan.textContent = originalBtnText;
+                    else dropdownBtn.innerHTML = `<span>${originalBtnText}</span> <i class="fas fa-chevron-down dropdown-arrow"></i>`;
+                }
+            }
+
+            if (!isExpanded && window.innerWidth < 768) {
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
+        }
+
+        if (dropdownBtn) {
+            dropdownBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleFeature(e);
+            });
+        }
+
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a, button:not(.feature-dropdown-btn)')) return;
+            toggleFeature(e);
+        });
+    });
+
+
+    /* --- 10. Unified Contact & Support Portal Interactivity --- */
+    // Dual-Mode Form Tabs (Inquiry vs Technical Support Ticket)
+    const formTabBtns = document.querySelectorAll('.form-tab-btn');
+    const inquiryPanel = document.getElementById('inquiryFormPanel');
+    const supportPanel = document.getElementById('supportTicketPanel');
+
+    formTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            formTabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const targetMode = btn.getAttribute('data-tab');
+
+            if (inquiryPanel && supportPanel) {
+                if (targetMode === 'support') {
+                    inquiryPanel.style.display = 'none';
+                    supportPanel.style.display = 'block';
+                } else {
+                    inquiryPanel.style.display = 'block';
+                    supportPanel.style.display = 'none';
+                }
+            }
+        });
+    });
+
+    // Support Search Hero Input
+    const supportSearchInput = document.getElementById('supportSearchInput');
+    const supportSearchBtn = document.getElementById('supportSearchBtn');
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    function filterFAQs() {
+        if (!supportSearchInput) return;
+        const query = supportSearchInput.value.trim().toLowerCase();
+        let found = false;
+
+        faqItems.forEach(item => {
+            const questionText = item.querySelector('.faq-question span')?.textContent.toLowerCase() || '';
+            const answerText = item.querySelector('.faq-answer')?.textContent.toLowerCase() || '';
+
+            if (!query || questionText.includes(query) || answerText.includes(query)) {
+                item.style.display = 'block';
+                if (query) {
+                    item.classList.add('active');
+                    found = true;
+                }
+            } else {
+                item.style.display = 'none';
+                item.classList.remove('active');
+            }
+        });
+
+        if (query && found) {
+            document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    if (supportSearchBtn) supportSearchBtn.addEventListener('click', filterFAQs);
+    if (supportSearchInput) {
+        supportSearchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') filterFAQs();
+            else if (supportSearchInput.value.trim() === '') filterFAQs();
+        });
+    }
+
+    // Unified Contact and Support Page Form Submissions
+    const contactPageForm = document.getElementById('contactPageForm');
+    if (contactPageForm) {
+        contactPageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah diterima oleh Tim Admissions & Akademik. Kami akan merespon via WhatsApp / Email dalam 1x24 jam.');
+            contactPageForm.reset();
+        });
+    }
+
+    const supportTicketForm = document.getElementById('supportTicketForm');
+    if (supportTicketForm) {
+        supportTicketForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const ticketId = 'TICK-' + Math.floor(100000 + Math.random() * 900000);
+            alert(`Tiket Bantuan Teknis Berhasil Dibuat!\nNomor Tiket Anda: ${ticketId}\nTim Helpdesk Virtual Lab AI Academy sedang memproses tiket Anda.`);
+            supportTicketForm.reset();
+        });
+    }
+
+    const mainRegistrationForm = document.getElementById('mainRegistrationForm');
+    if (mainRegistrationForm) {
+        mainRegistrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Pendaftaran Berhasil Dikirim! Akun Portal Mahasiswa dan panduan kelas akan segera dikirimkan ke Email & WhatsApp Anda.');
+            mainRegistrationForm.reset();
+        });
+    }
+
+
+    /* --- 11. Active Page Highlight & FAQ Accordion --- */
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navItems = document.querySelectorAll('.nav-list .nav-item');
     navItems.forEach(item => {

@@ -77,8 +77,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                    <li class="nav-item active"><a href="contact.html" class="nav-link"><i class="fas fa-headset"></i> Contact & Support</a></li>
                 </ul>
             </nav>
 
@@ -112,119 +111,337 @@
         <div class="drawer-content" id="mobileDrawerContent"></div>
     </div>
 
-    <!-- Subpage Hero Banner -->
-    <section class="page-hero">
+    <!-- Subpage Hero Banner with Search -->
+    <section class="page-hero" style="padding-bottom: 75px;">
         <div class="section-container">
-            <h1 class="page-hero-title">Hubungi Kami (Contact Us)</h1>
-            <p class="page-hero-subtitle">Tim Admissions & Layanan Akademik AI & Education Global Academy Denpasar siap membantu pertanyaan Anda mengenai program, kerjasama, dan reservasi kampus.</p>
-            <div class="breadcrumb-trail">
+            <div class="welcome-pill" style="margin: 0 auto 16px auto;">
+                <i class="fas fa-headset"></i>
+                <span class="pill-text">One-Stop Student & Visitor Assistance</span>
+            </div>
+            <h1 class="page-hero-title">Pusat Layanan, Kontak & Support Center</h1>
+            <p class="page-hero-subtitle">Konsultasi program AI, bantuan teknis Cloud Virtual Lab, pertanyaan beasiswa, dan reservasi kunjungan Kampus Denpasar Bali dalam satu portal terpadu.</p>
+            
+            <!-- Quick Live Support Search Widget -->
+            <div class="support-hero-search">
+                <i class="fas fa-search" style="color: var(--text-muted); margin-right: 10px;"></i>
+                <input type="text" id="supportSearchInput" placeholder="Cari topik bantuan (contoh: login portal, cloud gpu, jadwal kelas, beasiswa)...">
+                <button id="supportSearchBtn"><i class="fas fa-arrow-right"></i> Cari Bantuan</button>
+            </div>
+
+            <div class="breadcrumb-trail" style="margin-top: 24px;">
                 <a href="index.html">Home</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Contact</span>
+                <span>Contact & Support</span>
             </div>
         </div>
     </section>
 
-    <!-- Contact Details & Form Grid -->
-    <section class="section-padding" style="background: #FFFFFF;">
+    <!-- Quick Channels 4-Card Floating Grid -->
+    <section style="background: var(--bg-light); padding-bottom: 30px;">
+        <div class="section-container">
+            <div class="quick-channels-grid">
+                <!-- Channel 1: WhatsApp Admissions -->
+                <a href="https://wa.me/6281299887766" target="_blank" rel="noopener noreferrer" class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon" style="background: rgba(16, 185, 129, 0.12); color: #10B981;">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="channel-badge badge-online"><i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 4px;"></i> Online</span>
+                    </div>
+                    <h4>Hotline WhatsApp</h4>
+                    <p>Respon instan < 15 menit untuk pertanyaan pendaftaran, jadwal, & biaya kelas.</p>
+                    <div class="channel-action-link">Chat WhatsApp <i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <!-- Channel 2: 24/7 Cloud Support -->
+                <a href="#hubungi-kami" class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon" style="background: rgba(37, 99, 235, 0.12); color: var(--primary-blue);">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <span class="channel-badge badge-247">24/7 Helpdesk</span>
+                    </div>
+                    <h4>Bantuan Cloud Lab</h4>
+                    <p>Kendala akses GPU NVIDIA H100, JupyterHub, dan environment Python.</p>
+                    <div class="channel-action-link">Ajukan Tiket <i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <!-- Channel 3: Campus Visit -->
+                <a href="#lokasi-kampus" class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon" style="background: rgba(245, 158, 11, 0.12); color: #F59E0B;">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <span class="channel-badge badge-visit">Campus Tour</span>
+                    </div>
+                    <h4>Kunjungan Kampus</h4>
+                    <p>Jelajahi Lab Supercomputer & konsultasi tatap muka di Renon Denpasar.</p>
+                    <div class="channel-action-link">Peta & Jadwal <i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <!-- Channel 4: Academic & Partnership -->
+                <a href="#hubungi-kami" class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon" style="background: rgba(139, 92, 246, 0.12); color: #8B5CF6;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <span class="channel-badge badge-academic">Partnership</span>
+                    </div>
+                    <h4>Kemitraan Industri</h4>
+                    <p>Kolaborasi riset AI, beasiswa korporasi, dan program magang talenta.</p>
+                    <div class="channel-action-link">Hubungi Kemitraan <i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Dual-Mode Contact & Helpdesk Ticket Section -->
+    <section class="section-padding" id="hubungi-kami" style="background: #FFFFFF;">
         <div class="section-container">
             <div class="contact-layout-grid">
                 <!-- Left Info Card -->
                 <div class="contact-info-card">
-                    <h3 style="font-size: 1.5rem; font-weight: 800; color: #FFFFFF;">Pusat Layanan Akademi</h3>
-                    <p style="font-size: 0.95rem; color: #CBD5E1;">Silakan hubungi kami melalui saluran resmi atau kunjungi sekretariat kampus kami di Renon Denpasar Bali.</p>
+                    <span class="section-tag" style="background: rgba(56, 189, 248, 0.2); color: #38BDF8; align-self: flex-start;">OFFICE & SECRETARIAT</span>
+                    <h3 style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF;">Pusat Pelayanan Terpadu AI Academy</h3>
+                    <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.6;">
+                        Tim Admissions, Tim Pengajar, dan Helpdesk Teknis kami beroperasi setiap hari untuk memastikan pengalaman belajar AI Anda lancar tanpa kendala.
+                    </p>
                     
                     <div class="info-card-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="info-card-text">
-                            <h4>Alamat Kampus</h4>
-                            <p>Jl. Raya Puputan No. 88, Renon, Denpasar Selatan, Kota Denpasar, Bali 80226 - Indonesia</p>
+                            <h4>Lokasi Kampus Renon</h4>
+                            <p>Jl. Raya Puputan No. 88, Renon, Denpasar Selatan, Kota Denpasar, Bali 80226</p>
                         </div>
                     </div>
 
                     <div class="info-card-item">
                         <i class="fas fa-phone-alt"></i>
                         <div class="info-card-text">
-                            <h4>Telepon & WhatsApp</h4>
-                            <p>(0361) 9876543 / Hotline WA: 0812-9988-7766</p>
+                            <h4>Kontak Resmi</h4>
+                            <p>Telepon: (0361) 9876543<br>WhatsApp Hotline: 0812-9988-7766</p>
                         </div>
                     </div>
 
                     <div class="info-card-item">
                         <i class="fas fa-envelope"></i>
                         <div class="info-card-text">
-                            <h4>Email Resmi</h4>
-                            <p>admissions@aiacademy-denpasar.ac.id / info@aiacademy-denpasar.ac.id</p>
+                            <h4>Email Departemen</h4>
+                            <p>Admissions: admissions@aiacademy-denpasar.ac.id<br>Support Lab: support@aiacademy-denpasar.ac.id</p>
                         </div>
                     </div>
 
                     <div class="info-card-item">
                         <i class="fas fa-clock"></i>
                         <div class="info-card-text">
-                            <h4>Jam Operasional Sekretariat</h4>
-                            <p>Senin - Sabtu: 08.00 - 18.00 WITA<br>Minggu & Hari Libur: Layanan Virtual Online</p>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Sabtu: 08.00 - 18.00 WITA<br>Helpdesk Virtual Lab Online: 24 Jam Setiap Hari</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Inquiry Form -->
+                <!-- Right Form: Dual-Mode Tab Switcher -->
                 <div class="feature-card" style="padding: 36px;">
-                    <h3 class="feature-title" style="margin-bottom: 20px;">Kirim Pesan Langsung</h3>
-                    <form id="contactPageForm">
-                        <div class="form-group">
-                            <label for="cName">Nama Lengkap</label>
-                            <input type="text" id="cName" placeholder="Nama Anda" required class="form-control">
-                        </div>
-
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                            <div class="form-group">
-                                <label for="cEmail">Alamat Email</label>
-                                <input type="email" id="cEmail" placeholder="nama@email.com" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="cPhone">Nomor Telepon / WA</label>
-                                <input type="tel" id="cPhone" placeholder="0812345678" required class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cSubject">Subjek Pertanyaan</label>
-                            <select id="cSubject" class="form-control">
-                                <option value="pendaftaran">Pertanyaan Pendaftaran / Kelas</option>
-                                <option value="beasiswa">Informasi Beasiswa AI</option>
-                                <option value="kerjasama">Kerjasama Institusi / Industri</option>
-                                <option value="lainnya">Pertanyaan Umum</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cMessage">Pesan / Pertanyaan Anda</label>
-                            <textarea id="cMessage" rows="4" placeholder="Tuliskan pertanyaan atau informasi yang Anda butuhkan..." required class="form-control"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-block btn-search" style="padding: 14px;">
-                            <i class="fas fa-paper-plane"></i> Kirim Pesan Kontak
+                    <div class="form-tab-switcher">
+                        <button class="form-tab-btn active" data-tab="inquiry">
+                            <i class="fas fa-paper-plane"></i> Pesan & Pertanyaan Umum
                         </button>
-                    </form>
+                        <button class="form-tab-btn" data-tab="support">
+                            <i class="fas fa-ticket-alt"></i> Tiket Bantuan Teknis
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Inquiry / Admissions Form -->
+                    <div id="inquiryFormPanel">
+                        <h3 class="feature-title" style="margin-bottom: 6px;">Kirim Pesan atau Pertanyaan</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Dapatkan panduan program kelas, biaya, beasiswa, atau jadwal konsultasi.</p>
+                        
+                        <form id="contactPageForm">
+                            <div class="form-group">
+                                <label for="cName">Nama Lengkap</label>
+                                <input type="text" id="cName" placeholder="Nama Anda" required class="form-control">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div class="form-group">
+                                    <label for="cEmail">Alamat Email</label>
+                                    <input type="email" id="cEmail" placeholder="nama@email.com" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cPhone">Nomor WhatsApp</label>
+                                    <input type="tel" id="cPhone" placeholder="0812345678" required class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cSubject">Subjek / Topik</label>
+                                <select id="cSubject" class="form-control">
+                                    <option value="pendaftaran">Pendaftaran Kelas Baru (Online / Offline)</option>
+                                    <option value="beasiswa">Pengajuan Beasiswa Talenta AI</option>
+                                    <option value="kerjasama">Kerjasama Institusi & Riset Industri</option>
+                                    <option value="visit">Reservasi Kunjungan Kampus Renon</option>
+                                    <option value="lainnya">Pertanyaan Lainnya</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cMessage">Pesan atau Pertanyaan Anda</label>
+                                <textarea id="cMessage" rows="4" placeholder="Tuliskan pertanyaan atau kebutuhan belajar Anda secara lengkap..." required class="form-control"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-block btn-search" style="padding: 14px;">
+                                <i class="fas fa-paper-plane"></i> Kirim Pesan Sekarang
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Panel 2: Technical Support Helpdesk Ticket Form -->
+                    <div id="supportTicketPanel" style="display: none;">
+                        <h3 class="feature-title" style="margin-bottom: 6px;">Formulir Tiket Bantuan Teknis</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Layanan resolusi kendala teknis mahasiswa dan pengajar aktif AI Academy.</p>
+                        
+                        <form id="supportTicketForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div class="form-group">
+                                    <label for="tName">Nama / Student ID</label>
+                                    <input type="text" id="tName" placeholder="Contoh: STD-202601" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tEmail">Email Terdaftar</label>
+                                    <input type="email" id="tEmail" placeholder="student@email.com" required class="form-control">
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div class="form-group">
+                                    <label for="tCategory">Kategori Kendala</label>
+                                    <select id="tCategory" class="form-control">
+                                        <option value="cloud">Akses Cloud Lab & GPU H100</option>
+                                        <option value="login">Kendala Login / Kata Sandi Portal</option>
+                                        <option value="sertifikat">Penerbitan Sertifikat Digital</option>
+                                        <option value="tugas">Pengumpulan Tugas / Virtual Machine</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tPriority">Tingkat Prioritas</label>
+                                    <select id="tPriority" class="form-control">
+                                        <option value="normal">Normal (Merespon dalam 4 jam)</option>
+                                        <option value="high">Tinggi / Urgent (Sedang ada Ujian/Kelas)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tMessage">Deskripsi Kendala yang Dihadapi</label>
+                                <textarea id="tMessage" rows="4" placeholder="Jelaskan pesan error atau kendala yang Anda alami..." required class="form-control"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-block btn-search" style="padding: 14px; background: linear-gradient(135deg, var(--primary-blue), #1E40AF);">
+                                <i class="fas fa-ticket-alt"></i> Buat Tiket Support Baru
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location Map Card Section -->
-    <section class="section-padding" style="background: var(--bg-gray);">
+    <!-- Location & Campus Map Section -->
+    <section class="section-padding" id="lokasi-kampus" style="background: var(--bg-gray);">
         <div class="section-container">
             <div style="text-align: center; margin-bottom: 30px;">
-                <span class="section-tag">LOKASI KAMPUS</span>
-                <h2 class="section-title">Peta Lokasi Kampus Denpasar</h2>
+                <span class="section-tag">LOKASI & PETUNJUK ARAH</span>
+                <h2 class="section-title">Peta Kampus & Fasilitas Denpasar Bali</h2>
             </div>
             
-            <div class="feature-card" style="padding: 24px; text-align: center; align-items: center;">
-                <div style="width: 100%; height: 300px; background: var(--primary-dark); color: #FFFFFF; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
-                    <i class="fas fa-map-location-dot" style="font-size: 3.5rem; color: var(--accent-cyan);"></i>
-                    <h3 style="font-size: 1.3rem; color: #FFFFFF;">AI & Education Global Academy Denpasar</h3>
-                    <p style="color: #CBD5E1; max-width: 500px;">Jl. Raya Puputan No. 88, Renon, Denpasar Selatan, Kota Denpasar, Bali 80226</p>
-                    <a href="https://maps.google.com" target="_blank" class="btn btn-search" style="border-radius: var(--radius-pill);"><i class="fas fa-directions"></i> Buka Google Maps Navigasi</a>
+            <div class="feature-card" style="padding: 32px;">
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center;">
+                    <div style="width: 100%; height: 320px; background: var(--primary-dark); color: #FFFFFF; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; text-align: center;">
+                        <i class="fas fa-map-location-dot" style="font-size: 3.8rem; color: var(--accent-cyan);"></i>
+                        <h3 style="font-size: 1.35rem; color: #FFFFFF; font-weight: 800;">AI & Education Global Academy Denpasar</h3>
+                        <p style="color: #CBD5E1; max-width: 420px; font-size: 0.92rem;">Jl. Raya Puputan No. 88, Renon, Denpasar Selatan, Kota Denpasar, Bali 80226</p>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-search" style="border-radius: var(--radius-pill);"><i class="fas fa-directions"></i> Buka Google Maps Navigasi</a>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-dark); margin-bottom: 14px;">Petunjuk Akses Transportasi</h3>
+                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.92rem; color: var(--text-main);">
+                            <li style="display: flex; gap: 10px; align-items: flex-start;">
+                                <i class="fas fa-bus" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                                <span><strong>Trans Sarbagita / Angkutan Umum</strong>: Turun di Halte Puputan Renon (hanya 2 menit berjalan kaki ke gerbang utama kampus).</span>
+                            </li>
+                            <li style="display: flex; gap: 10px; align-items: flex-start;">
+                                <i class="fas fa-plane" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                                <span><strong>Dari Bandara Internasional Ngurah Rai</strong>: Sekitar 25 menit via Tol Bali Mandara menuju kawasan Renon.</span>
+                            </li>
+                            <li style="display: flex; gap: 10px; align-items: flex-start;">
+                                <i class="fas fa-square-parking" style="color: var(--primary-blue); margin-top: 4px;"></i>
+                                <span><strong>Area Parkir</strong>: Tersedia parkir mobil & motor luas gratis serta stasiun pengisian daya kendaraan listrik (EV Charging).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filterable FAQ Accordion Section -->
+    <section class="section-padding" id="faq-section" style="background: #FFFFFF;">
+        <div class="section-container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+                <h2 class="section-title">Pertanyaan Yang Sering Diajukan (FAQ)</h2>
+                <p style="max-width: 600px; margin: 10px auto 0 auto; color: var(--text-muted); font-size: 0.95rem;">Jawaban cepat untuk seputar pendaftaran, fasilitas laboratorium, beasiswa, dan sertifikasi.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        <span>Bagaimana cara mendaftar kelas Online Virtual Lab?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Anda dapat mengisi formulir pendaftaran pada halaman Pendaftaran atau menghubungi hotline WhatsApp kami. Tim Admissions akan mengonfirmasi jadwal serta mengirimkan kredensial login Portal AI Academy dan akses GPU Cloud dalam hitungan menit.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah saya perlu memiliki laptop dengan spesifikasi GPU tinggi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Tidak perlu. Seluruh pemrosesan komputasi berat model AI, fine-tuning LLM, dan visual computing dijalankan di atas Cloud Supercomputer GPU NVIDIA H100 yang disediakan gratis melalui peramban (browser) Anda.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana mekanisme seleksi Beasiswa Talenta AI 100%?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Pendaftar beasiswa cukup melampirkan portofolio atau surat motivasi saat mengisi formulir. Tim seleksi akan mengundang kandidat untuk mengikuti tes logika pemrograman dasar dan wawancara daring.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah peserta mendapatkan sertifikat kelulusan yang diakui industri?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Ya. Setiap lulusan menerima Sertifikat Digital Resmi bertanda tangan Dewan Pakar dan tersertifikasi bersama mitra global (Google Cloud, NVIDIA DLI, Microsoft Azure) dengan QR Code verifikasi blockchain.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Dimana lokasi pelaksanaan kelas Offline Class tatap muka?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Kelas offline diselenggarakan langsung di Kampus Denpasar Bali: Jl. Raya Puputan No. 88, Renon, Denpasar Selatan dengan fasilitas lab supercomputing berpendingin khusus dan ruang diskusi interaktif.
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,10 +460,10 @@
                         Akademi unggulan kecerdasan buatan, machine learning, dan teknologi pendidikan global yang berpusat di Denpasar, Bali.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/6281299887766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 

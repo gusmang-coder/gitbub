@@ -89,8 +89,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-headset"></i> Contact & Support</a></li>
                 </ul>
             </nav>
 
@@ -484,8 +483,8 @@
                 <div class="welcome-image-col">
                     <div class="principal-avatar-wrap">
                         <div class="avatar-ring"></div>
-                        <div class="avatar-box">
-                            <i class="fas fa-user-astronaut principal-placeholder-icon"></i>
+                        <div class="avatar-box" style="overflow: hidden; padding: 0;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Prof. Dr. I Made Arisutha" class="director-photo-img">
                         </div>
                         <div class="principal-badge">Academy Director</div>
                     </div>
@@ -523,7 +522,7 @@
 
             <div class="news-grid" id="newsGrid">
                 <!-- News Card 1 -->
-                <article class="news-card" data-category="berita" data-href="publikasi.html#berita">
+                <article class="news-card" data-category="berita">
                     <div class="news-thumb">
                         <span class="thumb-badge badge-blue">Berita AI</span>
                         <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Supercomputer GPU Node AI Denpasar" class="news-thumb-img">
@@ -534,14 +533,25 @@
                             <span><i class="far fa-calendar-alt"></i> 10 Agustus 2026</span>
                             <span><i class="far fa-user"></i> AI Research Lab</span>
                         </div>
-                        <h3 class="news-title"><a href="publikasi.html#berita">Peluncuran Supercomputer GPU Node Baru di Kampus Denpasar</a></h3>
+                        <h3 class="news-title">Peluncuran Supercomputer GPU Node Baru di Kampus Denpasar</h3>
                         <p class="news-excerpt">Akademi memfasilitasi mahasiswa dengan cluster GPU H100 untuk riset Large Language Models skala besar.</p>
-                        <a href="publikasi.html#berita" class="read-more-btn" data-id="1">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                        <button class="read-more-btn article-dropdown-btn">
+                            <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </button>
+
+                        <div class="news-full-details">
+                            <h4><i class="fas fa-microchip"></i> Cluster GPU NVIDIA H100</h4>
+                            <p>Fasilitas supercomputing modern dengan interkoneksi Quantum-2 InfiniBand 3.2 Tbps untuk riset LLM mandiri, multimodal vision, dan virtual lab praktikum mahasiswa.</p>
+                            <div class="news-details-footer">
+                                <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fas fa-map-marker-alt"></i> Kampus Denpasar</span>
+                                <a href="publikasi.html#berita" class="news-cta-btn"><i class="fas fa-newspaper"></i> Halaman Publikasi</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <!-- News Card 2 -->
-                <article class="news-card" data-category="pengumuman" data-href="publikasi.html#pengumuman">
+                <article class="news-card" data-category="pengumuman">
                     <div class="news-thumb">
                         <span class="thumb-badge badge-green">Pengumuman</span>
                         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Beasiswa Talenta AI Bali Wave 3" class="news-thumb-img">
@@ -552,14 +562,25 @@
                             <span><i class="far fa-calendar-alt"></i> 08 Agustus 2026</span>
                             <span><i class="far fa-user"></i> Admissions Committee</span>
                         </div>
-                        <h3 class="news-title"><a href="publikasi.html#pengumuman">Pendaftaran Beasiswa Talenta AI Bali Wave 3 Tahun 2026/2027</a></h3>
+                        <h3 class="news-title">Pendaftaran Beasiswa Talenta AI Bali Wave 3 Tahun 2026/2027</h3>
                         <p class="news-excerpt">Beasiswa penuh untuk program Sertifikasi AI Online & Offline bagi generasi muda berbakat.</p>
-                        <a href="publikasi.html#pengumuman" class="read-more-btn" data-id="2">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                        <button class="read-more-btn article-dropdown-btn">
+                            <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </button>
+
+                        <div class="news-full-details">
+                            <h4><i class="fas fa-graduation-cap"></i> Beasiswa 100% Bebas Biaya</h4>
+                            <p>Program beasiswa penuh bagi 50 talenta terbaik untuk menempuh program sertifikasi AI dengan tunjangan bulanan dan akses komputasi GPU Cloud gratis.</p>
+                            <div class="news-details-footer">
+                                <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fas fa-calendar"></i> Deadline: 30 September 2026</span>
+                                <a href="pendaftaran.html#syarat" class="news-cta-btn"><i class="fas fa-paper-plane"></i> Daftar Beasiswa</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <!-- News Card 3 -->
-                <article class="news-card" data-category="agenda" data-href="publikasi.html#agenda">
+                <article class="news-card" data-category="agenda">
                     <div class="news-thumb">
                         <span class="thumb-badge badge-orange">Agenda Summit</span>
                         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Bali International AI & Education Summit 2026" class="news-thumb-img">
@@ -570,9 +591,20 @@
                             <span><i class="far fa-calendar-alt"></i> 25 - 27 Agustus 2026</span>
                             <span><i class="far fa-user"></i> Global EdTech Board</span>
                         </div>
-                        <h3 class="news-title"><a href="publikasi.html#agenda">Bali International AI & Education Summit 2026</a></h3>
+                        <h3 class="news-title">Bali International AI & Education Summit 2026</h3>
                         <p class="news-excerpt">Konferensi Internasional yang menghadirkan pakar AI dari Silicon Valley, Asia Pasifik, dan Eropa di Denpasar.</p>
-                        <a href="publikasi.html#agenda" class="read-more-btn" data-id="3">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                        <button class="read-more-btn article-dropdown-btn">
+                            <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </button>
+
+                        <div class="news-full-details">
+                            <h4><i class="fas fa-globe"></i> Konferensi AI Terbesar di Bali</h4>
+                            <p>Dihadiri 1.200 delegasi internasional, keynote dari Stanford & NUS, expo inovasi startup AI, dan kolaborasi riset industri EdTech global.</p>
+                            <div class="news-details-footer">
+                                <span style="font-size: 0.82rem; color: var(--text-muted);"><i class="fas fa-map-pin"></i> Renon Convention Hall</span>
+                                <a href="publikasi.html#agenda" class="news-cta-btn"><i class="fas fa-info-circle"></i> Info Summit</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -598,10 +630,10 @@
                         Akademi unggulan kecerdasan buatan, machine learning, dan teknologi pendidikan global yang berpusat di Denpasar, Bali.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/6281299887766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 

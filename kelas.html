@@ -89,8 +89,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-headset"></i> Contact & Support</a></li>
                 </ul>
             </nav>
 
@@ -146,32 +145,73 @@
             </div>
 
             <div class="feature-card-grid">
-                <div class="feature-card" id="online">
-                    <div class="feature-icon-box">
-                        <i class="fas fa-laptop-code"></i>
+                <!-- Track 1: Online -->
+                <div class="feature-card has-thumb" id="online">
+                    <div class="card-thumb-wrap">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Online Class Virtual Lab" class="card-thumb-img">
                     </div>
-                    <h3 class="feature-title">Online Class Virtual Lab</h3>
-                    <p class="feature-desc">Pembelajaran interaktif berbasis Cloud GPU Supercomputer, live streaming bersama mentor internasional, proyek hands-on, dan forum diskusi 24/7.</p>
-                    <ul style="list-style: disc; padding-left: 20px; font-size: 0.9rem; color: var(--text-main);">
-                        <li>Akses cloud GPU NVIDIA T4 & A100</li>
-                        <li>Sertifikat digital terverifikasi blockchain</li>
-                        <li>Jadwal fleksibel malam & akhir pekan</li>
-                    </ul>
-                    <button class="btn btn-search btn-enroll" style="margin-top: 10px;">Daftar Online Class</button>
+                    <div class="feature-card-body">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span class="schedule-mode-badge badge-mode-online"><i class="fas fa-wifi"></i> Virtual Lab</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">Live Interactive</span>
+                        </div>
+                        <h3 class="feature-title">Online Class Virtual Lab</h3>
+                        <p class="feature-desc">Pembelajaran interaktif berbasis Cloud GPU Supercomputer, live streaming bersama mentor internasional, proyek hands-on, dan forum diskusi 24/7.</p>
+                        <ul style="list-style: disc; padding-left: 20px; font-size: 0.88rem; color: var(--text-main); line-height: 1.6;">
+                            <li>Akses cloud GPU NVIDIA T4, A100 & Cloud Lab</li>
+                            <li>Sertifikat digital terverifikasi blockchain</li>
+                            <li>Jadwal fleksibel malam & akhir pekan</li>
+                        </ul>
+                        <button class="btn btn-contact btn-enroll" style="margin-top: 10px; width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Daftar Online Class
+                        </button>
+                    </div>
                 </div>
 
-                <div class="feature-card" id="offline">
-                    <div class="feature-icon-box">
-                        <i class="fas fa-building-user"></i>
+                <!-- Track 2: Offline -->
+                <div class="feature-card has-thumb" id="offline">
+                    <div class="card-thumb-wrap">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Offline Class Denpasar Campus" class="card-thumb-img">
                     </div>
-                    <h3 class="feature-title">Offline Class Denpasar Campus</h3>
-                    <p class="feature-desc">Tatap muka langsung di Lab AI Supercomputer Kampus Renon Denpasar Bali. Dilengkapi fasilitas studio EdTech, hardware robotika, dan jejaring komunitas lokal.</p>
-                    <ul style="list-style: disc; padding-left: 20px; font-size: 0.9rem; color: var(--text-main);">
-                        <li>Praktek langsung hardware AI & Edge Devices</li>
-                        <li>Mentoring tatap muka 1-on-1 bersama Dosen Pakar</li>
-                        <li>Ruang diskusi eksklusif & co-working space</li>
-                    </ul>
-                    <button class="btn btn-search btn-enroll" style="margin-top: 10px;">Daftar Offline Class</button>
+                    <div class="feature-card-body">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span class="schedule-mode-badge badge-mode-offline"><i class="fas fa-location-dot"></i> Renon Campus</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">Hardware & Lab</span>
+                        </div>
+                        <h3 class="feature-title">Offline Class Denpasar Campus</h3>
+                        <p class="feature-desc">Tatap muka langsung di Lab AI Supercomputer Kampus Renon Denpasar Bali. Dilengkapi fasilitas studio EdTech, hardware robotika, dan jejaring komunitas lokal.</p>
+                        <ul style="list-style: disc; padding-left: 20px; font-size: 0.88rem; color: var(--text-main); line-height: 1.6;">
+                            <li>Praktek langsung hardware AI & Edge Devices</li>
+                            <li>Mentoring tatap muka 1-on-1 bersama Dosen Pakar</li>
+                            <li>Ruang diskusi eksklusif & co-working space</li>
+                        </ul>
+                        <button class="btn btn-contact btn-enroll" style="margin-top: 10px; width: 100%;">
+                            <i class="fas fa-building-user"></i> Daftar Offline Class
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Track 3: Executive Masterclass -->
+                <div class="feature-card has-thumb" id="executive">
+                    <div class="card-thumb-wrap">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Executive AI Masterclass" class="card-thumb-img">
+                    </div>
+                    <div class="feature-card-body">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span class="schedule-mode-badge" style="background: rgba(245, 158, 11, 0.15); color: #D97706;"><i class="fas fa-crown"></i> Executive Track</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">Leadership</span>
+                        </div>
+                        <h3 class="feature-title">Executive AI Leadership Track</h3>
+                        <p class="feature-desc">Program intensif khusus pimpinan institusi pendidikan, direktur, dan profesional untuk merancang transformasi AI & adopsi teknologi generasi baru.</p>
+                        <ul style="list-style: disc; padding-left: 20px; font-size: 0.88rem; color: var(--text-main); line-height: 1.6;">
+                            <li>Studi kasus implementasi enterprise AI & EdTech</li>
+                            <li>Konsultasi privat roadmap transformasi digital</li>
+                            <li>Jejaring eksklusif dewan pakar Silicon Valley & Asia</li>
+                        </ul>
+                        <button class="btn btn-contact btn-enroll" style="margin-top: 10px; width: 100%;">
+                            <i class="fas fa-award"></i> Konsultasi Executive
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,10 +230,10 @@
             <div class="schedule-controls">
                 <div class="schedule-tabs">
                     <button class="tab-schedule-btn active" data-schedule-mode="online">
-                        <i class="fas fa-wifi"></i> Online Class
+                        <i class="fas fa-wifi"></i> Online Class Schedule
                     </button>
                     <button class="tab-schedule-btn" data-schedule-mode="offline">
-                        <i class="fas fa-location-dot"></i> Offline Class
+                        <i class="fas fa-location-dot"></i> Offline Class Schedule (Denpasar Campus)
                     </button>
                 </div>
 
@@ -204,79 +244,212 @@
                     <button class="day-chip" data-day="rabu">Rabu</button>
                     <button class="day-chip" data-day="kamis">Kamis</button>
                     <button class="day-chip" data-day="jumat">Jumat</button>
-                    <button class="day-chip" data-day="sabtu">Sabtu & Minggu</button>
+                    <button class="day-chip" data-day="sabtu">Sabtu</button>
                 </div>
             </div>
 
             <div class="schedule-list">
+                <!-- ONLINE CLASS 1 (Senin) -->
                 <div class="schedule-card" data-mode="online" data-day="senin">
                     <div class="schedule-header">
-                        <span class="schedule-time-badge"><i class="far fa-clock"></i> 19.00 - 21.00 WITA</span>
-                        <span class="schedule-mode-badge badge-mode-online">Online</span>
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Senin, 19:00 - 21:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-online">Virtual Lab Zoom</span>
                     </div>
-                    <h3 class="schedule-title">Prompt Engineering & Generative AI for Educator</h3>
+                    <h3 class="schedule-title">Prompt Engineering & Large Language Models (LLM)</h3>
                     <div class="schedule-meta-info">
-                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> Dr. I Made Arisutha, M.Kom</div>
-                        <div class="schedule-meta-item"><i class="fas fa-calendar-alt"></i> Setiap Hari Senin</div>
-                        <div class="schedule-meta-item"><i class="fas fa-video"></i> Google Meet & Cloud Lab</div>
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Dr. Wayan Agus S., M.T.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-layer-group"></i> <span>Tingkat: Basic to Intermediate</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-code-branch"></i> <span>Platform: Virtual AI Cloud Studio</span></div>
                     </div>
                     <div class="schedule-footer">
-                        <span class="schedule-spots"><i class="fas fa-user-check"></i> Sisa 4 Kuota</span>
-                        <button class="btn btn-enroll">Ambil Kelas</button>
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 5 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kelas Online</button>
                     </div>
                 </div>
 
+                <!-- ONLINE CLASS 2 (Selasa) -->
+                <div class="schedule-card" data-mode="online" data-day="selasa">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Selasa, 19:00 - 21:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-online">Live Interactive</span>
+                    </div>
+                    <h3 class="schedule-title">Machine Learning & Python Data Science Fundamentals</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Made Surya, Ph.D.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-layer-group"></i> <span>Tingkat: Intermediate</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-code-branch"></i> <span>Platform: Google Colab & Discord AI</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 8 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kelas Online</button>
+                    </div>
+                </div>
+
+                <!-- ONLINE CLASS 3 (Rabu) -->
                 <div class="schedule-card" data-mode="online" data-day="rabu">
                     <div class="schedule-header">
-                        <span class="schedule-time-badge"><i class="far fa-clock"></i> 18.30 - 20.30 WITA</span>
-                        <span class="schedule-mode-badge badge-mode-online">Online</span>
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Rabu, 19:00 - 21:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-online">Virtual Lab Zoom</span>
                     </div>
-                    <h3 class="schedule-title">Machine Learning Fundamentals & Python AI</h3>
+                    <h3 class="schedule-title">AI for Educators: Smart Assessment & Curriculum Automation</h3>
                     <div class="schedule-meta-info">
-                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> Ni Putu Clarissa, Ph.D</div>
-                        <div class="schedule-meta-item"><i class="fas fa-calendar-alt"></i> Setiap Hari Rabu</div>
-                        <div class="schedule-meta-item"><i class="fas fa-video"></i> Zoom Live Virtual Room</div>
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Prof. Dr. I Made Arisutha</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-layer-group"></i> <span>Tingkat: All Educators</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-code-branch"></i> <span>Platform: Canvas EdTech Portal</span></div>
                     </div>
                     <div class="schedule-footer">
-                        <span class="schedule-spots"><i class="fas fa-user-check"></i> Sisa 8 Kuota</span>
-                        <button class="btn btn-enroll">Ambil Kelas</button>
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 12 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kelas Online</button>
                     </div>
                 </div>
 
+                <!-- ONLINE CLASS 4 (Kamis) - EXTRA CLASS -->
+                <div class="schedule-card" data-mode="online" data-day="kamis">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Kamis, 19:00 - 21:30 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-online">Live Coding Lab</span>
+                    </div>
+                    <h3 class="schedule-title">Fullstack AI Application Engineering & Agentic Workflow</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Ketut Dharmawan, M.Sc.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-layer-group"></i> <span>Tingkat: Intermediate to Advanced</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-code-branch"></i> <span>Platform: GitHub Codespaces & Vercel AI</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 6 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kelas Online</button>
+                    </div>
+                </div>
+
+                <!-- ONLINE CLASS 5 (Jumat) - EXTRA CLASS -->
+                <div class="schedule-card" data-mode="online" data-day="jumat">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Jumat, 19:00 - 21:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-online">NLP Studio</span>
+                    </div>
+                    <h3 class="schedule-title">Natural Language Processing with Transformers & PyTorch</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Ni Putu Clarissa, Ph.D.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-layer-group"></i> <span>Tingkat: Advanced</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-code-branch"></i> <span>Platform: HuggingFace & Cloud GPU</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 4 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kelas Online</button>
+                    </div>
+                </div>
+
+                <!-- ONLINE CLASS 6 (Sabtu) -->
+                <div class="schedule-card" data-mode="online" data-day="sabtu">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Sabtu, 13:00 - 16:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-online">Weekend Intensive</span>
+                    </div>
+                    <h3 class="schedule-title">Deep Learning & Computer Vision Masterclass</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Ir. Putu Eka Pratama, M.Eng.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-layer-group"></i> <span>Tingkat: Advanced</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-code-branch"></i> <span>Platform: GPU Cloud Lab Cluster</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 3 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kelas Online</button>
+                    </div>
+                </div>
+
+                <!-- OFFLINE CLASS 1 (Senin) -->
+                <div class="schedule-card" data-mode="offline" data-day="senin" style="display: none;">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Senin, 14:00 - 17:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-offline">Denpasar Campus</span>
+                    </div>
+                    <h3 class="schedule-title">Robotics, IoT & Embedded AI Hardware Workshop</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Nyoman Aryana, S.T., M.T.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-map-marker-alt"></i> <span>Lokasi: Lab Robotics 1, Kampus Denpasar</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-microchip"></i> <span>Fasilitas: Kits NVIDIA Jetson & Arduino</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Terbatas 15 Peserta</span>
+                        <button class="btn btn-enroll">Daftar Kampus Denpasar</button>
+                    </div>
+                </div>
+
+                <!-- OFFLINE CLASS 2 (Selasa) - EXTRA CLASS -->
                 <div class="schedule-card" data-mode="offline" data-day="selasa" style="display: none;">
                     <div class="schedule-header">
-                        <span class="schedule-time-badge"><i class="far fa-clock"></i> 14.00 - 17.00 WITA</span>
-                        <span class="schedule-mode-badge badge-mode-offline">Offline</span>
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Selasa, 14:00 - 17:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-offline">Supercomputer Lab</span>
                     </div>
-                    <h3 class="schedule-title">Supercomputer Infrastructure & Deep Neural Nets</h3>
+                    <h3 class="schedule-title">High-Performance Computing & GPU Node Clustering</h3>
                     <div class="schedule-meta-info">
-                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> Prof. I Gede Wira Utama</div>
-                        <div class="schedule-meta-item"><i class="fas fa-calendar-alt"></i> Setiap Hari Selasa</div>
-                        <div class="schedule-meta-item"><i class="fas fa-building"></i> Lab Supercomputer Gd. A</div>
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Prof. I Gede Wira Utama</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-map-marker-alt"></i> <span>Lokasi: Supercomputer Server Room Gd. A</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-server"></i> <span>Fasilitas: Cluster NVIDIA A100 & InfiniBand</span></div>
                     </div>
                     <div class="schedule-footer">
-                        <span class="schedule-spots"><i class="fas fa-user-check"></i> Sisa 2 Kuota</span>
-                        <button class="btn btn-enroll">Ambil Kelas</button>
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 4 Kursi</span>
+                        <button class="btn btn-enroll">Daftar Kampus Denpasar</button>
                     </div>
                 </div>
 
-                <div class="schedule-card" data-mode="offline" data-day="sabtu" style="display: none;">
+                <!-- OFFLINE CLASS 3 (Kamis) -->
+                <div class="schedule-card" data-mode="offline" data-day="kamis" style="display: none;">
                     <div class="schedule-header">
-                        <span class="schedule-time-badge"><i class="far fa-clock"></i> 09.00 - 13.00 WITA</span>
-                        <span class="schedule-mode-badge badge-mode-offline">Offline</span>
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Kamis, 14:00 - 17:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-offline">Denpasar Campus</span>
                     </div>
-                    <h3 class="schedule-title">EdTech AI Innovation Bootcamp (Weekend Intensive)</h3>
+                    <h3 class="schedule-title">Autonomous AI Systems & Smart Drones Lab</h3>
                     <div class="schedule-meta-info">
-                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> Tim Instruktur Denpasar</div>
-                        <div class="schedule-meta-item"><i class="fas fa-calendar-alt"></i> Sabtu & Minggu</div>
-                        <div class="schedule-meta-item"><i class="fas fa-building"></i> Auditorium Utama Renon</div>
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Kadek Gede W., Ph.D.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-map-marker-alt"></i> <span>Lokasi: AI Innovation Hall Denpasar</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-microchip"></i> <span>Fasilitas: Arena Flight & LiDAR Sensors</span></div>
                     </div>
                     <div class="schedule-footer">
-                        <span class="schedule-spots"><i class="fas fa-user-check"></i> Sisa 6 Kuota</span>
-                        <button class="btn btn-enroll">Ambil Kelas</button>
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Terbatas 10 Peserta</span>
+                        <button class="btn btn-enroll">Daftar Kampus Denpasar</button>
                     </div>
                 </div>
+
+                <!-- OFFLINE CLASS 4 (Jumat) -->
+                <div class="schedule-card" data-mode="offline" data-day="jumat" style="display: none;">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Jumat, 15:00 - 18:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-offline">Denpasar Campus</span>
+                    </div>
+                    <h3 class="schedule-title">Generative AI Media, Audio & Digital Twin Design</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Instructor: Ni Luh Putu Devy, M.Ds.</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-map-marker-alt"></i> <span>Lokasi: Digital Studio Kampus Denpasar</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-microchip"></i> <span>Fasilitas: Workstation RTX 4090</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Terbatas 12 Peserta</span>
+                        <button class="btn btn-enroll">Daftar Kampus Denpasar</button>
+                    </div>
+                </div>
+
+                <!-- OFFLINE CLASS 5 (Sabtu) -->
+                <div class="schedule-card" data-mode="offline" data-day="sabtu" style="display: none;">
+                    <div class="schedule-header">
+                        <span class="schedule-time-badge"><i class="far fa-clock"></i> Sabtu, 09:00 - 15:00 WITA</span>
+                        <span class="schedule-mode-badge badge-mode-offline">Executive Workshop</span>
+                    </div>
+                    <h3 class="schedule-title">Executive AI Leadership & Business Strategy Masterclass</h3>
+                    <div class="schedule-meta-info">
+                        <div class="schedule-meta-item"><i class="fas fa-user-tie"></i> <span>Keynote: International AI Advisory Board</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-map-marker-alt"></i> <span>Lokasi: Main Auditorium Denpasar</span></div>
+                        <div class="schedule-meta-item"><i class="fas fa-award"></i> <span>Termasuk: Certificate, Lunch & Networking</span></div>
+                    </div>
+                    <div class="schedule-footer">
+                        <span class="schedule-spots"><i class="fas fa-users"></i> Sisa 6 Kursi Eksekutif</span>
+                        <button class="btn btn-enroll">Daftar Kampus Denpasar</button>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
         </div>
     </section>
 
@@ -293,10 +466,10 @@
                         Akademi unggulan kecerdasan buatan, machine learning, dan teknologi pendidikan global yang berpusat di Denpasar, Bali.
                     </p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/6281299887766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
