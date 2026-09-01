@@ -62,15 +62,15 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="kesiswaan.html" class="nav-link">Kesiswaan <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <a href="kemahasiswaan.html" class="nav-link">Kemahasiswaan <i class="fas fa-chevron-down dropdown-icon"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="kesiswaan.html#osis"><i class="fas fa-users"></i> OSIS & MPK</a></li>
-                            <li><a href="kesiswaan.html#ekskul"><i class="fas fa-puzzle-piece"></i> Ekstrakurikuler</a></li>
-                            <li><a href="kesiswaan.html#prestasi"><i class="fas fa-trophy"></i> Prestasi Siswa</a></li>
-                            <li><a href="kesiswaan.html#beasiswa"><i class="fas fa-graduation-cap"></i> Beasiswa</a></li>
-                            <li><a href="kesiswaan.html#bk"><i class="fas fa-hands-helping"></i> Bimbingan Konseling</a></li>
-                            <li><a href="kesiswaan.html#tatatertib"><i class="fas fa-clipboard-list"></i> Tata Tertib</a></li>
-                            <li><a href="kesiswaan.html#unitproduksi"><i class="fas fa-store"></i> Unit Produksi</a></li>
+                            <li><a href="kemahasiswaan.html#bem-dpm"><i class="fas fa-landmark"></i> BEM & DPM / MPM</a></li>
+                            <li><a href="kemahasiswaan.html#ekskul"><i class="fas fa-puzzle-piece"></i> Ekstrakurikuler</a></li>
+                            <li><a href="kemahasiswaan.html#prestasi"><i class="fas fa-trophy"></i> Prestasi Siswa</a></li>
+                            <li><a href="kemahasiswaan.html#beasiswa"><i class="fas fa-graduation-cap"></i> Beasiswa</a></li>
+                            <li><a href="kemahasiswaan.html#bk"><i class="fas fa-hands-helping"></i> Bimbingan Konseling</a></li>
+                            <li><a href="kemahasiswaan.html#tatatertib"><i class="fas fa-clipboard-list"></i> Tata Tertib</a></li>
+                            <li><a href="kemahasiswaan.html#unitproduksi"><i class="fas fa-store"></i> Unit Produksi</a></li>
                         </ul>
                     </li>
 
@@ -165,6 +165,14 @@
                     <div class="search-input-wrap">
                         <i class="fas fa-search search-icon"></i>
                         <input type="text" id="searchInput" placeholder="Cari program, materi AI, atau jadwal kelas..." autocomplete="off">
+                        <!-- Live Search Autocomplete Dropdown -->
+                        <div class="search-autocomplete-dropdown" id="searchAutocompleteDropdown">
+                            <div class="autocomplete-header">
+                                <span><i class="fas fa-sparkles"></i> Rekomendasi & Topik Populer</span>
+                                <span class="autocomplete-hint">Pilih topik atau ketik kata kunci</span>
+                            </div>
+                            <div class="autocomplete-list" id="searchAutocompleteList"></div>
+                        </div>
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-category-wrap">
