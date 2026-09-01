@@ -82,8 +82,9 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="register.html" class="btn btn-primary" style="padding: 10px 18px; border-radius: var(--radius-sm); background: var(--primary-blue); color: #fff; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fas fa-user-plus"></i> Register
+                <a href="register.html" class="btn btn-register-nav">
+                    <span>Daftar Sekarang</span>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
 
@@ -93,99 +94,136 @@
         </div>
     </header>
 
-    <!-- Main Login Container -->
+    <!-- Main Login Split Container -->
     <main class="auth-wrapper">
         <div class="auth-container">
-            <div class="auth-card">
+            <div class="auth-split-card">
                 
-                <!-- Auth Card Header -->
-                <div class="auth-header">
-                    <div class="auth-logo">
-                        <img src="Img/Logo.png" alt="AI Academy Logo" class="auth-logo-img">
+                <!-- Left Showcase Panel -->
+                <div class="auth-showcase-panel">
+                    <div class="auth-showcase-header">
+                        <div class="auth-showcase-brand">
+                            <img src="Img/Logo.png" alt="AI Academy Logo" class="auth-showcase-logo">
+                            <div>
+                                <span style="font-size: 0.95rem; font-weight: 800; display: block; color: #FFFFFF;">AI & EDUCATION</span>
+                                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">Global Academy Denpasar</span>
+                            </div>
+                        </div>
+
+                        <span class="auth-showcase-badge"><i class="fas fa-bolt"></i> Official Academic Portal</span>
+                        <h1 class="auth-showcase-title">Pusat Pembelajaran & Riset AI Modern</h1>
+                        <p class="auth-showcase-desc">
+                            Masuk untuk mengakses Cloud GPU Virtual Lab, instans Supercomputer, materi kurikulum, serta portofolio sertifikasi Anda.
+                        </p>
+
+                        <ul class="auth-perks-list">
+                            <li class="auth-perk-item">
+                                <div class="auth-perk-icon"><i class="fas fa-server"></i></div>
+                                <span><strong>Supercomputer NVIDIA H100</strong> akses komputasi virtual lab berkecepatan tinggi.</span>
+                            </li>
+                            <li class="auth-perk-item">
+                                <div class="auth-perk-icon"><i class="fas fa-certificate"></i></div>
+                                <span><strong>Sertifikasi Terverifikasi</strong> standar industri kecerdasan buatan global.</span>
+                            </li>
+                            <li class="auth-perk-item">
+                                <div class="auth-perk-icon"><i class="fas fa-user-shield"></i></div>
+                                <span><strong>Keamanan Data Terenkripsi</strong> sesuai regulasi UU PDP No. 27/2022.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h2>Portal Masuk Akademi</h2>
-                    <p>Artificial Intelligence & Education Global Academy Denpasar</p>
+
+                    <!-- 1-Click Quick Demo Accounts Box -->
+                    <div class="auth-demo-widget">
+                        <div class="auth-demo-widget-title">
+                            <span><i class="fas fa-magic"></i> Akun Demo Cepat (1-Klik):</span>
+                            <span style="font-size: 0.68rem; color: #94A3B8; text-transform: none; font-weight: 500;">Klik untuk isi otomatis</span>
+                        </div>
+                        <div class="demo-chips-grid">
+                            <button type="button" class="demo-chip-btn" data-demo="student">
+                                <span><i class="fas fa-user-graduate" style="color:#38BDF8; margin-right: 6px;"></i> Ahmad Fauzi</span>
+                                <span class="demo-chip-role">Student</span>
+                            </button>
+                            <button type="button" class="demo-chip-btn" data-demo="mentor">
+                                <span><i class="fas fa-chalkboard-teacher" style="color:#818CF8; margin-right: 6px;"></i> Dr. Wayan Artawa</span>
+                                <span class="demo-chip-role" style="background: rgba(99, 102, 241, 0.2); color:#A5B4FC;">Mentor</span>
+                            </button>
+                            <button type="button" class="demo-chip-btn" data-demo="admin">
+                                <span><i class="fas fa-user-shield" style="color:#34D399; margin-right: 6px;"></i> Ade Administrator</span>
+                                <span class="demo-chip-role" style="background: rgba(16, 185, 129, 0.2); color:#6EE7B7;">Admin</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Role Selector Tabs -->
-                <div class="auth-role-tabs">
-                    <button type="button" class="role-tab-btn active" data-role="student">
-                        <i class="fas fa-user-graduate"></i> Student
-                    </button>
-                    <button type="button" class="role-tab-btn" data-role="mentor">
-                        <i class="fas fa-chalkboard-teacher"></i> Mentor / Faculty
-                    </button>
-                    <button type="button" class="role-tab-btn" data-role="admin">
-                        <i class="fas fa-user-shield"></i> Admin
-                    </button>
-                </div>
-
-                <!-- Auth Card Body / Form -->
-                <div class="auth-body">
-
-                    <!-- PHP Backend Alert Placeholder (Uncomment when linking to PHP) -->
-                    <!--
-                    <?php if(isset($_GET['error'])): ?>
-                        <div class="alert-box alert-danger">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <span><?php echo htmlspecialchars($_GET['error']); ?></span>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if(isset($_GET['success'])): ?>
-                        <div class="alert-box alert-success">
-                            <i class="fas fa-check-circle"></i>
-                            <span><?php echo htmlspecialchars($_GET['success']); ?></span>
-                        </div>
-                    <?php endif; ?>
-                    -->
-
-                    <form id="standaloneLoginForm" action="login.php" method="POST">
-                        
-                        <!-- Role input for backend processing -->
-                        <input type="hidden" name="user_role" id="userRoleInput" value="student">
-
-                        <!-- Email / ID Field -->
-                        <div class="form-group">
-                            <label for="loginUsername">Email / ID Peserta / NIP</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-envelope"></i>
-                                <input type="text" name="username_email" id="loginUsername" placeholder="Masukkan ID atau Email Anda" required autocomplete="username">
-                            </div>
+                <!-- Right Form Panel -->
+                <div class="auth-form-panel">
+                    <div>
+                        <div class="auth-form-header">
+                            <h2>Portal Masuk Akademi</h2>
+                            <p>Silakan pilih jenis akses dan masukkan kredensial akun Anda.</p>
                         </div>
 
-                        <!-- Password Field -->
-                        <div class="form-group">
-                            <label for="loginPassword">Kata Sandi</label>
-                            <div class="input-with-icon input-password-wrapper">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" name="password" id="loginPassword" placeholder="Masukkan Kata Sandi" required autocomplete="current-password">
-                                <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
-                                    <i class="fas fa-eye"></i>
+                        <!-- Role Selector Tabs -->
+                        <div class="auth-role-tabs">
+                            <button type="button" class="role-tab-btn active" data-role="student">
+                                <i class="fas fa-user-graduate"></i> Student
+                            </button>
+                            <button type="button" class="role-tab-btn" data-role="mentor">
+                                <i class="fas fa-chalkboard-teacher"></i> Mentor
+                            </button>
+                            <button type="button" class="role-tab-btn" data-role="admin">
+                                <i class="fas fa-user-shield"></i> Admin
+                            </button>
+                        </div>
+
+                        <!-- Form Body -->
+                        <div class="auth-body">
+                            <form id="standaloneLoginForm" action="login.php" method="POST">
+                                <input type="hidden" name="user_role" id="userRoleInput" value="student">
+
+                                <!-- Email / Username Field -->
+                                <div class="form-group">
+                                    <label for="loginUsername">Email / Username / ID Peserta</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="text" name="username_email" id="loginUsername" placeholder="nama@aiacademy.ac.id atau username" required autocomplete="username">
+                                    </div>
+                                </div>
+
+                                <!-- Password Field -->
+                                <div class="form-group">
+                                    <label for="loginPassword">Kata Sandi</label>
+                                    <div class="input-with-icon input-password-wrapper">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" name="password" id="loginPassword" placeholder="Masukkan kata sandi Anda" required autocomplete="current-password">
+                                        <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Options: Remember & Forgot -->
+                                <div class="auth-options">
+                                    <label class="form-check">
+                                        <input type="checkbox" name="remember_me" value="1" checked>
+                                        <span>Ingat Sesi Saya</span>
+                                    </label>
+                                    <a href="#" class="forgot-link" onclick="alert('Silakan hubungi administrator kampus melalui Contact/Support jika Anda lupa kata sandi.'); return false;">Lupa Kata Sandi?</a>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn-auth-submit" id="btnSubmitLogin">
+                                    <span>Masuk Ke Portal AI</span>
+                                    <i class="fas fa-arrow-right"></i>
                                 </button>
-                            </div>
+                            </form>
                         </div>
+                    </div>
 
-                        <!-- Options: Remember Me & Forgot Password -->
-                        <div class="auth-options">
-                            <label class="form-check">
-                                <input type="checkbox" name="remember_me" value="1">
-                                <span>Ingat Saya</span>
-                            </label>
-                            <a href="#" class="forgot-link" onclick="alert('Silakan hubungi administrator kampus melalui Contact/Support jika Anda lupa kata sandi.'); return false;">Lupa Kata Sandi?</a>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn-auth-submit">
-                            <i class="fas fa-sign-in-alt"></i> Masuk Ke Portal
-                        </button>
-                    </form>
-
-                </div>
-
-                <!-- Auth Card Footer -->
-                <div class="auth-footer">
-                    Belum memiliki akun akademi? <a href="register.html">Daftar Akun Baru</a>
+                    <!-- Auth Card Footer -->
+                    <div class="auth-footer">
+                        Belum memiliki akun akademi? <a href="register.html">Daftar Akun Baru Sekarang</a>
+                    </div>
                 </div>
 
             </div>
@@ -245,9 +283,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Artificial Intelligence and Education Global Academy Denpasar. All Rights Reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
                     <span class="dot">•</span>
-                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
                 </div>
             </div>
         </div>

@@ -82,8 +82,9 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="login.html" class="btn btn-login" style="padding: 10px 18px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.1); color: #fff; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="far fa-user"></i> Login
+                <a href="login.html" class="btn btn-login">
+                    <i class="far fa-user"></i>
+                    <span>Portal Masuk</span>
                 </a>
             </div>
 
@@ -93,139 +94,188 @@
         </div>
     </header>
 
-    <!-- Main Register Container -->
+    <!-- Main Register Split Container -->
     <main class="auth-wrapper">
-        <div class="auth-container register-container">
-            <div class="auth-card">
+        <div class="auth-container">
+            <div class="auth-split-card">
                 
-                <!-- Auth Card Header -->
-                <div class="auth-header">
-                    <div class="auth-logo">
-                        <img src="Img/Logo.png" alt="AI Academy Logo" class="auth-logo-img">
+                <!-- Left Showcase Panel -->
+                <div class="auth-showcase-panel">
+                    <div class="auth-showcase-header">
+                        <div class="auth-showcase-brand">
+                            <img src="Img/Logo.png" alt="AI Academy Logo" class="auth-showcase-logo">
+                            <div>
+                                <span style="font-size: 0.95rem; font-weight: 800; display: block; color: #FFFFFF;">AI & EDUCATION</span>
+                                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">Global Academy Denpasar</span>
+                            </div>
+                        </div>
+
+                        <span class="auth-showcase-badge"><i class="fas fa-user-plus"></i> New Student & Faculty Enrollment</span>
+                        <h1 class="auth-showcase-title">Mulai Akselerasi Karir AI Global Anda</h1>
+                        <p class="auth-showcase-desc">
+                            Daftar akun sekarang untuk mendapatkan akses ke ekosistem Virtual Lab, komputasi Supercomputer, dan sertifikasi kecerdasan buatan terakreditasi.
+                        </p>
+
+                        <ul class="auth-perks-list">
+                            <li class="auth-perk-item">
+                                <div class="auth-perk-icon"><i class="fas fa-laptop-code"></i></div>
+                                <span><strong>Akses Instan Cloud AI Lab</strong> lingkungan Jupyter Lab & GPU compute.</span>
+                            </li>
+                            <li class="auth-perk-item">
+                                <div class="auth-perk-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <span><strong>Mentoring Eksklusif</strong> langsung dari pakar AI & dosen peneliti Bali.</span>
+                            </li>
+                            <li class="auth-perk-item">
+                                <div class="auth-perk-icon"><i class="fas fa-network-wired"></i></div>
+                                <span><strong>Jaringan Industri Global</strong> peluang karir dan beasiswa penelitian.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h2>Buat Akun Akademi Baru</h2>
-                    <p>Artificial Intelligence & Education Global Academy Denpasar</p>
-                </div>
 
-                <!-- Auth Card Body / Form -->
-                <div class="auth-body">
-
-                    <!-- PHP Backend Alert Placeholder (Uncomment when linking to PHP) -->
-                    <!--
-                    <?php if(isset($register_error)): ?>
-                        <div class="alert-box alert-danger">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <span><?php echo htmlspecialchars($register_error); ?></span>
+                    <!-- 1-Click Quick Fill Button for testing -->
+                    <div class="auth-demo-widget">
+                        <div class="auth-demo-widget-title">
+                            <span><i class="fas fa-magic"></i> Generator Data Pendaftaran:</span>
                         </div>
-                    <?php endif; ?>
-
-                    <?php if(isset($register_success)): ?>
-                        <div class="alert-box alert-success">
-                            <i class="fas fa-check-circle"></i>
-                            <span><?php echo htmlspecialchars($register_success); ?></span>
-                        </div>
-                    <?php endif; ?>
-                    -->
-
-                    <form id="registerForm" action="register.php" method="POST">
-                        
-                        <div class="auth-form-grid">
-                            <!-- Full Name -->
-                            <div class="form-group">
-                                <label for="regFullName">Nama Lengkap</label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" name="full_name" id="regFullName" placeholder="Nama Lengkap dengan Gelar" required>
-                                </div>
-                            </div>
-
-                            <!-- Username -->
-                            <div class="form-group">
-                                <label for="regUsername">Username</label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-at"></i>
-                                    <input type="text" name="username" id="regUsername" placeholder="Username Akun" required autocomplete="username">
-                                </div>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="form-group">
-                                <label for="regEmail">Alamat Email</label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" name="email" id="regEmail" placeholder="nama@domain.com" required autocomplete="email">
-                                </div>
-                            </div>
-
-                            <!-- WhatsApp / Phone -->
-                            <div class="form-group">
-                                <label for="regPhone">Nomor WhatsApp / HP</label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-phone"></i>
-                                    <input type="tel" name="phone" id="regPhone" placeholder="08xxxxxxxxxx" required>
-                                </div>
-                            </div>
-
-                            <!-- Program / Access Role -->
-                            <div class="form-group full-width">
-                                <label for="regRole">Program / Jalur Pendaftaran</label>
-                                <div class="input-with-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <select name="program_role" id="regRole" required>
-                                        <option value="student_online">Online Class - Virtual AI Lab</option>
-                                        <option value="student_offline">Offline Class - Denpasar Campus</option>
-                                        <option value="mentor">Mentor / Faculty Instructor</option>
-                                        <option value="researcher">General Researcher / Academician</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Password -->
-                            <div class="form-group">
-                                <label for="regPassword">Kata Sandi</label>
-                                <div class="input-with-icon input-password-wrapper">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" name="password" id="regPassword" placeholder="Minimal 8 karakter" required autocomplete="new-password">
-                                    <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Confirm Password -->
-                            <div class="form-group">
-                                <label for="regConfirmPassword">Konfirmasi Kata Sandi</label>
-                                <div class="input-with-icon input-password-wrapper">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <input type="password" name="confirm_password" id="regConfirmPassword" placeholder="Ulangi kata sandi" required autocomplete="new-password">
-                                    <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Terms Checkbox -->
-                            <div class="form-group full-width">
-                                <label class="form-check" style="align-items: flex-start;">
-                                    <input type="checkbox" name="terms" value="1" required style="margin-top: 4px;">
-                                    <span style="font-size: 0.86rem; color: var(--text-main);">
-                                        Saya menyetujui <strong>Syarat & Ketentuan Layanan</strong> serta Kebijakan Privasi Data Peserta di AI & Education Global Academy Denpasar.
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn-auth-submit" style="margin-top: 10px;">
-                            <i class="fas fa-user-plus"></i> Daftar Akun Sekarang
+                        <p style="font-size: 0.76rem; color: #94A3B8; margin-bottom: 8px;">Ingin mencoba pendaftaran tanpa mengetik manual?</p>
+                        <button type="button" class="demo-chip-btn" id="btnQuickFillRegister" style="width: 100%; justify-content: center; background: rgba(37, 99, 235, 0.25); border-color: rgba(56, 189, 248, 0.4);">
+                            <i class="fas fa-bolt" style="color: #FBBF24; margin-right: 8px;"></i>
+                            <span>Isi Data Pendaftaran Otomatis</span>
                         </button>
-                    </form>
-
+                    </div>
                 </div>
 
-                <!-- Auth Card Footer -->
-                <div class="auth-footer">
-                    Sudah memiliki akun akademi? <a href="login.html">Masuk ke Portal Login</a>
+                <!-- Right Form Panel -->
+                <div class="auth-form-panel">
+                    <div>
+                        <div class="auth-form-header">
+                            <h2>Buat Akun Akademi Baru</h2>
+                            <p>Lengkapi formulir di bawah ini untuk mengaktifkan akun Anda.</p>
+                        </div>
+
+                        <!-- Form Body -->
+                        <div class="auth-body" style="padding-top: 18px;">
+                            <form id="registerForm" action="register.php" method="POST">
+                                
+                                <div class="auth-form-grid">
+                                    <!-- Full Name -->
+                                    <div class="form-group">
+                                        <label for="regFullName">Nama Lengkap</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" name="full_name" id="regFullName" placeholder="Nama Lengkap dengan Gelar" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Username -->
+                                    <div class="form-group">
+                                        <label for="regUsername">Username</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-at"></i>
+                                            <input type="text" name="username" id="regUsername" placeholder="username_anda" required autocomplete="username">
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                        <label for="regEmail">Alamat Email</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-envelope"></i>
+                                            <input type="email" name="email" id="regEmail" placeholder="nama@domain.com" required autocomplete="email">
+                                        </div>
+                                    </div>
+
+                                    <!-- WhatsApp / Phone -->
+                                    <div class="form-group">
+                                        <label for="regPhone">Nomor WhatsApp / HP</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-phone"></i>
+                                            <input type="tel" name="phone" id="regPhone" placeholder="08xxxxxxxxxx" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Program / Access Role -->
+                                    <div class="form-group full-width">
+                                        <label for="regRole">Program / Jalur Pendaftaran</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <select name="program_role" id="regRole" required>
+                                                <option value="student_online">Online Class — Virtual AI Lab</option>
+                                                <option value="student_offline">Offline Class — Denpasar Campus</option>
+                                                <option value="mentor">Mentor / Faculty Instructor</option>
+                                                <option value="researcher">General Researcher / Academician</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Official Student / Staff ID Field -->
+                                    <div class="form-group full-width" style="background: rgba(14, 165, 233, 0.05); border: 1px solid rgba(14, 165, 233, 0.25); border-radius: var(--radius-sm); padding: 12px 16px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; flex-wrap: wrap; gap: 6px;">
+                                            <label for="regStudentId" style="margin-bottom: 0; font-weight: 700; color: var(--primary-dark);">
+                                                <i class="fas fa-id-card" style="color: var(--primary-blue); margin-right: 6px;"></i> ID Resmi Peserta / NIP
+                                            </label>
+                                            <button type="button" id="btnRequestStaffId" style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(37, 99, 235, 0.35); color: var(--primary-blue); font-size: 0.76rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-pill); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;">
+                                                <i class="fab fa-whatsapp" style="color: #10B981; font-size: 0.85rem;"></i> Belum Punya ID? Minta ke Staff Kampus
+                                            </button>
+                                        </div>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-barcode"></i>
+                                            <input type="text" name="student_id" id="regStudentId" placeholder="Contoh: AI-STD-1001 atau AI-MNT-2001 (Diberikan oleh Staff)" required autocomplete="off">
+                                        </div>
+                                        <div style="font-size: 0.76rem; color: #64748B; margin-top: 5px; display: flex; align-items: center; gap: 6px;">
+                                            <i class="fas fa-info-circle" style="color: var(--primary-blue);"></i>
+                                            <span>ID resmi hanya diterbitkan oleh Staff Akademik bagi peserta/mahasiswa yang terverifikasi.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="form-group">
+                                        <label for="regPassword">Kata Sandi</label>
+                                        <div class="input-with-icon input-password-wrapper">
+                                            <i class="fas fa-lock"></i>
+                                            <input type="password" name="password" id="regPassword" placeholder="Minimal 6 karakter" required autocomplete="new-password">
+                                            <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Confirm Password -->
+                                    <div class="form-group">
+                                        <label for="regConfirmPassword">Konfirmasi Kata Sandi</label>
+                                        <div class="input-with-icon input-password-wrapper">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <input type="password" name="confirm_password" id="regConfirmPassword" placeholder="Ulangi kata sandi" required autocomplete="new-password">
+                                            <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Terms Checkbox -->
+                                    <div class="form-group full-width">
+                                        <label class="form-check" style="align-items: flex-start;">
+                                            <input type="checkbox" name="terms" value="1" required style="margin-top: 4px;">
+                                            <span style="font-size: 0.84rem; color: var(--text-main); line-height: 1.4;">
+                                                Saya menyetujui <a href="syarat-ketentuan.html" target="_blank" style="color: var(--primary-blue); font-weight: 700; text-decoration: underline;">Syarat & Ketentuan Layanan</a> serta <a href="kebijakan-privasi.html" target="_blank" style="color: var(--primary-blue); font-weight: 700; text-decoration: underline;">Kebijakan Privasi</a> Data Peserta di AI & Education Global Academy Denpasar.
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn-auth-submit" id="btnSubmitRegister" style="margin-top: 6px;">
+                                    <span>Daftar Akun Sekarang</span>
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Auth Card Footer -->
+                    <div class="auth-footer">
+                        Sudah memiliki akun akademi? <a href="login.html">Masuk ke Portal Login</a>
+                    </div>
                 </div>
 
             </div>
@@ -285,13 +335,52 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Artificial Intelligence and Education Global Academy Denpasar. All Rights Reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
                     <span class="dot">•</span>
-                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Request Staff ID Modal -->
+    <div class="modal-backdrop" id="staffIdModal">
+        <div class="modal-card" style="max-width: 520px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-id-card-alt"></i> Permintaan ID Resmi ke Staff Kampus</h3>
+                <button class="modal-close" id="staffIdClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid var(--primary-blue); padding: 12px 14px; border-radius: 4px; margin-bottom: 18px; font-size: 0.86rem; color: var(--text-dark);">
+                    <strong>Ketentuan Penerbitan ID:</strong> ID resmi diterbitkan bagi calon peserta/siswa yang telah terdaftar dalam sistem akademik kampus Denpasar. Silakan hubungi staff admin atau isi form di bawah.
+                </div>
+
+                <form id="requestStaffIdForm">
+                    <div class="form-group">
+                        <label for="reqName">Nama Lengkap Siswa</label>
+                        <input type="text" id="reqName" class="form-control" placeholder="Nama Lengkap sesuai identitas" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reqSchool">Asal Institusi / Sekolah / Universitas</label>
+                        <input type="text" id="reqSchool" class="form-control" placeholder="Contoh: SMA/SMK di Bali atau Universitas" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reqWa">Nomor WhatsApp Aktif</label>
+                        <input type="tel" id="reqWa" class="form-control" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; margin-top: 20px;">
+                        <button type="button" class="btn btn-secondary" id="btnDemoGenerateId" style="flex: 1; padding: 11px; font-size: 0.86rem; background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-weight: 700; cursor: pointer;">
+                            <i class="fas fa-bolt" style="color: #F59E0B;"></i> Generate ID Demo
+                        </button>
+                        <button type="submit" class="btn btn-primary" style="flex: 1.2; padding: 11px; font-size: 0.86rem; background: #25D366; color: #fff; border: none; border-radius: var(--radius-sm); font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                            <i class="fab fa-whatsapp"></i> Chat Staff WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Mobile Drawer Overlay -->
     <div class="drawer-overlay" id="drawerOverlay"></div>

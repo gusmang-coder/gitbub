@@ -50,6 +50,19 @@
                     </li>
 
                     <li class="nav-item dropdown">
+                        <a href="kesiswaan.html" class="nav-link">Kesiswaan <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kesiswaan.html#osis"><i class="fas fa-users"></i> OSIS & MPK</a></li>
+                            <li><a href="kesiswaan.html#ekskul"><i class="fas fa-puzzle-piece"></i> Ekstrakurikuler</a></li>
+                            <li><a href="kesiswaan.html#prestasi"><i class="fas fa-trophy"></i> Prestasi Siswa</a></li>
+                            <li><a href="kesiswaan.html#beasiswa"><i class="fas fa-graduation-cap"></i> Beasiswa</a></li>
+                            <li><a href="kesiswaan.html#bk"><i class="fas fa-hands-helping"></i> Bimbingan Konseling</a></li>
+                            <li><a href="kesiswaan.html#tatatertib"><i class="fas fa-clipboard-list"></i> Tata Tertib</a></li>
+                            <li><a href="kesiswaan.html#unitproduksi"><i class="fas fa-store"></i> Unit Produksi</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
                         <a href="direktori.html" class="nav-link">Direktori <i class="fas fa-chevron-down dropdown-icon"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="direktori.html#guru"><i class="fas fa-user-tie"></i> Data Instruktur & Mentors</a></li>
@@ -85,8 +98,8 @@
                 <button class="btn btn-login" id="openLoginBtn">
                     <i class="far fa-user"></i> Portal Student
                 </button>
-                <button class="btn btn-contact" id="openContactBtn">
-                    Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                <button class="btn btn-contact btn-register-nav" id="openRegisterHubBtn">
+                    <span>Daftar Akun</span> <i class="fas fa-user-plus"></i>
                 </button>
                 <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
                     <i class="fas fa-bars"></i>
@@ -140,87 +153,87 @@
                 </div>
             </div>
 
-            <div class="news-grid">
-                <!-- News Item 1 -->
-                <article class="news-card" data-category="berita" id="berita">
+            <div class="news-grid" id="newsGrid">
+                <!-- News Item 1: Virtual Lab GPU -->
+                <article class="news-card" data-category="berita" data-tags="virtual lab gpu supercomputer nvidia h100 cluster">
                     <div class="news-thumb">
-                        <span class="thumb-badge badge-blue">Riset AI</span>
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Peluncuran Supercomputer GPU Node Baru" class="news-thumb-img">
+                        <span class="thumb-badge badge-blue"><i class="fas fa-bolt"></i> Virtual Lab GPU</span>
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Peluncuran Virtual Lab GPU NVIDIA H100" class="news-thumb-img">
                         <div class="news-thumb-overlay"></div>
                     </div>
                     <div class="news-body">
                         <div class="news-meta">
                             <span><i class="far fa-calendar"></i> 10 Agustus 2026</span>
-                            <span><i class="far fa-user"></i> AI Research Lab Denpasar</span>
+                            <span><i class="far fa-user"></i> AI Supercomputing Lab</span>
                         </div>
-                        <h3 class="news-title">Peluncuran Supercomputer GPU Node Baru di Kampus Denpasar</h3>
-                        <p class="news-excerpt">Akademi memfasilitasi mahasiswa dan peneliti dengan cluster GPU NVIDIA H100 untuk akselerasi riset Large Language Models (LLM) dan multimodal AI.</p>
+                        <h3 class="news-title">Peluncuran Klaster Virtual Lab GPU NVIDIA H100 di Kampus Denpasar</h3>
+                        <p class="news-excerpt">Akademi resmi memfasilitasi mahasiswa dan peneliti dengan cluster Virtual Lab GPU NVIDIA H100 80GB untuk akselerasi praktikum machine learning & komputasi terdistribusi 24/7.</p>
                         <button class="read-more-btn article-dropdown-btn">
                             <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </button>
 
                         <!-- Expanded Accordion Details -->
                         <div class="news-full-details">
-                            <h4><i class="fas fa-microchip"></i> Spesifikasi & Akses Supercomputer Lab</h4>
-                            <p>Kampus Denpasar kini resmi mengoperasikan 8 node NVIDIA H100 Tensor Core GPU dengan interkoneksi Quantum-2 InfiniBand 3.2 Tbps. Fasilitas ini dirancang khusus untuk memfasilitasi mahasiswa kelas riset intensif dan peneliti akademisi dalam mengembangkan model AI mandiri.</p>
+                            <h4><i class="fas fa-microchip"></i> Spesifikasi & Akses Klaster Virtual Lab GPU</h4>
+                            <p>Kampus Denpasar kini resmi mengoperasikan 8 node NVIDIA H100 Tensor Core GPU dengan interkoneksi Quantum-2 InfiniBand 3.2 Tbps. Fasilitas Virtual Lab GPU ini memungkinkan mahasiswa kelas online maupun offline mengeksekusi model komputasi berat secara remote langsung dari browser.</p>
                             
-                            <h4><i class="fas fa-check-circle"></i> Cakupan Riset & Manfaat:</h4>
+                            <h4><i class="fas fa-check-circle"></i> Fasilitas Virtual Lab GPU:</h4>
                             <ul>
-                                <li><i class="fas fa-check"></i> <strong>Training Large Language Models (LLM)</strong>: Eksplorasi fine-tuning arsitektur open-weights untuk bahasa daerah dan konteks budaya Nusantara.</li>
-                                <li><i class="fas fa-check"></i> <strong>Computer Vision & Spatial Intelligence</strong>: Pemodelan citra satelit dan visual recognition untuk konservasi pariwisata & maritim Bali.</li>
-                                <li><i class="fas fa-check"></i> <strong>Akses Virtual Lab 24/7</strong>: Mahasiswa kelas Online dan Offline dapat mengakses terminal JupyterHub dan SSH compute cluster dari mana saja.</li>
+                                <li><i class="fas fa-check"></i> <strong>Akses Terminal JupyterHub & SSH Cloud</strong>: Kompilasi script Python, PyTorch, dan CUDA 12 tanpa memerlukan laptop berspesifikasi tinggi.</li>
+                                <li><i class="fas fa-check"></i> <strong>Storage Scratch NVMe 30TB</strong>: Bandwidth I/O super cepat untuk pemrosesan dataset gigabyte.</li>
+                                <li><i class="fas fa-check"></i> <strong>Alokasi Kuota Komputasi Gratis</strong>: Setiap siswa aktif mendapatkan alokasi jam komputasi dedicated setiap pekannya.</li>
                             </ul>
 
                             <div class="news-details-footer">
-                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-map-marker-alt"></i> Gedung Supercomputer Center Lt. 3, Renon Denpasar</span>
-                                <a href="kelas.html#online" class="news-cta-btn"><i class="fas fa-laptop-code"></i> Lihat Kelas Terkait</a>
+                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-map-marker-alt"></i> Supercomputer Center Lt. 3, Renon Denpasar</span>
+                                <a href="kelas.html#online" class="news-cta-btn"><i class="fas fa-laptop-code"></i> Pelajari Kelas Virtual Lab</a>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- News Item 2 -->
-                <article class="news-card" data-category="berita">
+                <!-- News Item 2: Deep Learning -->
+                <article class="news-card" data-category="berita" data-tags="deep learning neural network vision transformer multimodal">
                     <div class="news-thumb">
-                        <span class="thumb-badge badge-blue">Riset AI</span>
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Implementasi Generative AI dalam Evaluasi Pembelajaran" class="news-thumb-img">
+                        <span class="thumb-badge badge-blue"><i class="fas fa-robot"></i> Deep Learning</span>
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="Riset Deep Learning & Neural Architecture" class="news-thumb-img">
                         <div class="news-thumb-overlay"></div>
                     </div>
                     <div class="news-body">
                         <div class="news-meta">
-                            <span><i class="far fa-calendar"></i> 05 Agustus 2026</span>
-                            <span><i class="far fa-user"></i> Tim Riset EdTech</span>
+                            <span><i class="far fa-calendar"></i> 07 Agustus 2026</span>
+                            <span><i class="far fa-user"></i> Deep Learning Faculty</span>
                         </div>
-                        <h3 class="news-title">Implementasi Generative AI dalam Metode Evaluasi Pembelajaran Modern</h3>
-                        <p class="news-excerpt">Bagaimana algoritma LLM dan adaptive learning mampu merancang soal ujian terpersonalisasi dan analisis kompetensi siswa secara otomatis dalam hitungan detik.</p>
+                        <h3 class="news-title">Riset Akselerasi Deep Learning & Neural Network Multimodal untuk Edukasi</h3>
+                        <p class="news-excerpt">Tim peneliti akademi mempublikasikan arsitektur Deep Learning mutakhir yang mengoptimalkan transfer learning pada citra medis dan analisis konten pendidikan interaktif.</p>
                         <button class="read-more-btn article-dropdown-btn">
                             <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </button>
 
                         <!-- Expanded Accordion Details -->
                         <div class="news-full-details">
-                            <h4><i class="fas fa-brain"></i> Revolusi Personalisasi Asesmen Pendidikan</h4>
-                            <p>Penelitian gabungan tim AI Global Academy dan pengajar mitra menunjukkan bahwa penerapan sistem evaluasi adaptif berbantuan LLM berhasil meningkatkan retensi pemahaman materi hingga 42% dibandingkan asesmen statis konvensional.</p>
+                            <h4><i class="fas fa-network-wired"></i> Terobosan Pemodelan Neural Deep Learning</h4>
+                            <p>Studi terbaru dari laboratorium Deep Learning Denpasar memadukan Convolutional Neural Networks (CNN) dan Vision Transformers (ViT) untuk menghasilkan representasi fitur berakurasi tinggi dengan efisiensi parameter 40% lebih hemat.</p>
                             
-                            <h4><i class="fas fa-star"></i> Poin Utama Inovasi:</h4>
+                            <h4><i class="fas fa-star"></i> Manfaat & Aplikasi Riset:</h4>
                             <ul>
-                                <li><i class="fas fa-check"></i> <strong>Dynamic Question Generation</strong>: Soal dan studi kasus yang disesuaikan secara real-time berdasarkan tingkat pemahaman individu siswa.</li>
-                                <li><i class="fas fa-check"></i> <strong>Automated Semantic Feedback</strong>: Umpan balik koreksi komprehensif instan yang menjelaskan konsep keliru tanpa sekadar memberi nilai angka.</li>
-                                <li><i class="fas fa-check"></i> <strong>Ethical AI Guardrails</strong>: Protokol keamanan dan privasi data siswa yang memenuhi standar perlindungan privasi global.</li>
+                                <li><i class="fas fa-check"></i> <strong>Multi-GPU Parallel Training</strong>: Efisiensi pelatihan model skala besar menggunakan library PyTorch Distributed & DeepSpeed.</li>
+                                <li><i class="fas fa-check"></i> <strong>Edge Deep Learning Deployment</strong>: Konversi model via TensorRT dan ONNX untuk eksekusi real-time pada robotika dan IoT.</li>
+                                <li><i class="fas fa-check"></i> <strong>Open Source Codebase</strong>: Kode riset dan bobot model pre-trained dibagikan secara terbuka di repositori akademi.</li>
                             </ul>
 
                             <div class="news-details-footer">
-                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-book-open"></i> Diterbitkan pada EdTech Research Quarterly 2026</span>
+                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-book-open"></i> Dipresentasikan pada IEEE AI Conference 2026</span>
                                 <a href="profil.html#dewan-pakar" class="news-cta-btn"><i class="fas fa-users"></i> Profil Tim Peneliti</a>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- News Item 3 -->
-                <article class="news-card" data-category="pengumuman" id="pengumuman">
+                <!-- News Item 3: Beasiswa -->
+                <article class="news-card" data-category="pengumuman" data-tags="beasiswa bali denpasar gratis 100% biaya pendidikan wave 3">
                     <div class="news-thumb">
-                        <span class="thumb-badge badge-green">Beasiswa</span>
+                        <span class="thumb-badge badge-green"><i class="fas fa-graduation-cap"></i> Beasiswa Bali</span>
                         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Pendaftaran Beasiswa Talenta AI Bali Wave 3" class="news-thumb-img">
                         <div class="news-thumb-overlay"></div>
                     </div>
@@ -229,39 +242,74 @@
                             <span><i class="far fa-calendar"></i> 08 Agustus 2026</span>
                             <span><i class="far fa-user"></i> Admissions Committee</span>
                         </div>
-                        <h3 class="news-title">Pendaftaran Beasiswa Talenta AI Bali Wave 3 Tahun 2026/2027</h3>
-                        <p class="news-excerpt">Program beasiswa penuh 100% biaya pendidikan untuk calon engineer AI, data scientist, dan tech innovator muda dari seluruh Indonesia.</p>
+                        <h3 class="news-title">Pendaftaran Beasiswa Talenta AI Denpasar Wave 3 Tahun 2026/2027 (100% Bebas Biaya)</h3>
+                        <p class="news-excerpt">Program beasiswa penuh 100% biaya pendidikan dan tunjangan riset untuk calon engineer AI, data scientist, dan tech innovator muda berprestasi.</p>
                         <button class="read-more-btn article-dropdown-btn">
                             <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </button>
 
                         <!-- Expanded Accordion Details -->
                         <div class="news-full-details">
-                            <h4><i class="fas fa-graduation-cap"></i> Cakupan & Fasilitas Beasiswa Penuh</h4>
-                            <p>Program Beasiswa Talenta AI Bali Wave 3 membuka kesempatan bagi 50 talenta terbaik untuk menempuh program Diploma & Sertifikasi Profesional AI Global Academy tanpa dipungut biaya sepeser pun.</p>
+                            <h4><i class="fas fa-award"></i> Cakupan & Fasilitas Beasiswa Penuh</h4>
+                            <p>Program Beasiswa Talenta AI Denpasar Wave 3 membuka kesempatan bagi 50 talenta terbaik untuk menempuh program Sertifikasi Profesional & Diploma AI Global Academy tanpa biaya pendaftaran dan SPP.</p>
                             
                             <h4><i class="fas fa-list-check"></i> Manfaat Penerima Beasiswa:</h4>
                             <ul>
-                                <li><i class="fas fa-check"></i> <strong>100% Bebas Biaya Kuliah & Sertifikasi Internasional</strong> selama masa studi.</li>
-                                <li><i class="fas fa-check"></i> <strong>Monthly Living Allowance</strong> & subsidi akses komputasi GPU Cloud $500/bulan.</li>
-                                <li><i class="fas fa-check"></i> <strong>Jalur Magang Langsung</strong> di mitra industri teknologi ternama di Bali, Jakarta, dan Singapura.</li>
+                                <li><i class="fas fa-check"></i> <strong>100% Bebas Biaya Kuliah & Sertifikasi Global</strong> selama masa program.</li>
+                                <li><i class="fas fa-check"></i> <strong>Subsidi Komputasi GPU Virtual Lab</strong> senilai $500/bulan per mahasiswa.</li>
+                                <li><i class="fas fa-check"></i> <strong>Penyaluran Karir & Magang</strong> di mitra industri teknologi di Bali, Jakarta, dan Singapura.</li>
                             </ul>
 
-                            <h4><i class="fas fa-calendar-alt"></i> Timeline Seleksi:</h4>
-                            <p style="font-size: 0.88rem; color: var(--text-muted);">Pendaftaran ditutup: <strong>30 September 2026</strong> | Tes Logika & Coding: <strong>05 Oktober 2026</strong> | Pengumuman: <strong>15 Oktober 2026</strong></p>
-
                             <div class="news-details-footer">
-                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-shield-alt"></i> Kuota Terbatas (50 Kursi)</span>
-                                <a href="pendaftaran.html#syarat" class="news-cta-btn"><i class="fas fa-paper-plane"></i> Daftar Beasiswa Ini</a>
+                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-clock"></i> Batas Akhir: 30 September 2026</span>
+                                <a href="pendaftaran.html#syarat" class="news-cta-btn"><i class="fas fa-paper-plane"></i> Daftar Beasiswa Sekarang</a>
                             </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- News Item 4 -->
-                <article class="news-card" data-category="pengumuman">
+                <!-- News Item 4: Large Language Model / LLM & NLP -->
+                <article class="news-card" data-category="berita" data-tags="large language model llm nlp natural language processing generative ai prompt">
                     <div class="news-thumb">
-                        <span class="thumb-badge badge-green">Workshop</span>
+                        <span class="thumb-badge badge-blue"><i class="fas fa-lightbulb"></i> LLM & NLP</span>
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Pengembangan Model Large Language Model LLM NLP" class="news-thumb-img">
+                        <div class="news-thumb-overlay"></div>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 05 Agustus 2026</span>
+                            <span><i class="far fa-user"></i> NLP Research Lab</span>
+                        </div>
+                        <h3 class="news-title">Pengembangan Model Large Language Model (LLM) & NLP Bahasa Daerah Nusantara</h3>
+                        <p class="news-excerpt">Inovasi model AI pemrosesan bahasa alami (NLP) berkonteks multibahasa Nusantara untuk memperkuat sistem pembelajaran cerdas dan asisten virtual lokal.</p>
+                        <button class="read-more-btn article-dropdown-btn">
+                            <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </button>
+
+                        <!-- Expanded Accordion Details -->
+                        <div class="news-full-details">
+                            <h4><i class="fas fa-brain"></i> Arsitektur LLM & NLP Multibahasa</h4>
+                            <p>Riset NLP berfokus pada teknik Retrieval-Augmented Generation (RAG) dan fine-tuning arsitektur Transformer 7B/13B parameter untuk mengenali ragam tata bahasa dan dialek lokal secara presisi.</p>
+                            
+                            <h4><i class="fas fa-star"></i> Keunggulan Model:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Context Window 128k Tokens</strong>: Mampu membaca naskah riset dan modul pembelajaran panjang dalam hitungan detik.</li>
+                                <li><i class="fas fa-check"></i> <strong>Low-Latency Inference</strong>: Teroptimasi menggunakan framework vLLM pada klaster GPU NVIDIA H100 kampus.</li>
+                                <li><i class="fas fa-check"></i> <strong>Penerapan AI Tutor</strong>: Diintegrasikan langsung sebagai tutor pendamping otomatis bagi seluruh mahasiswa akademi.</li>
+                            </ul>
+
+                            <div class="news-details-footer">
+                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-file-code"></i> Model Open-Weights & API Tersedia</span>
+                                <a href="kelas.html#online" class="news-cta-btn"><i class="fas fa-graduation-cap"></i> Ikuti Kelas Gen AI & LLM</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Item 5: Workshop -->
+                <article class="news-card" data-category="pengumuman" data-tags="workshop prompt engineering educator guru dosen pelatihan">
+                    <div class="news-thumb">
+                        <span class="thumb-badge badge-green"><i class="fas fa-chalkboard-teacher"></i> Workshop</span>
                         <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Workshop National Prompt Engineering" class="news-thumb-img">
                         <div class="news-thumb-overlay"></div>
                     </div>
@@ -296,10 +344,10 @@
                     </div>
                 </article>
 
-                <!-- News Item 5 -->
-                <article class="news-card" data-category="agenda" id="agenda">
+                <!-- News Item 6: Global Summit -->
+                <article class="news-card" data-category="agenda" data-tags="summit konferensi bali international ai education summit renon">
                     <div class="news-thumb">
-                        <span class="thumb-badge badge-orange">Global Summit</span>
+                        <span class="thumb-badge badge-orange"><i class="fas fa-globe-asia"></i> Global Summit</span>
                         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Bali International AI & Education Summit 2026" class="news-thumb-img">
                         <div class="news-thumb-overlay"></div>
                     </div>
@@ -329,44 +377,6 @@
                             <div class="news-details-footer">
                                 <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-map-pin"></i> Renon Grand Ballroom, Denpasar Bali</span>
                                 <a href="contact.html" class="news-cta-btn"><i class="fas fa-info-circle"></i> Info Tiket & Booth</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- News Item 6 -->
-                <article class="news-card" data-category="agenda">
-                    <div class="news-thumb">
-                        <span class="thumb-badge badge-orange">Hackathon</span>
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="AI EdTech Global Hackathon Bali" class="news-thumb-img">
-                        <div class="news-thumb-overlay"></div>
-                    </div>
-                    <div class="news-body">
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar"></i> 12 - 14 September 2026</span>
-                            <span><i class="fas fa-trophy"></i> Total Hadiah $50,000</span>
-                        </div>
-                        <h3 class="news-title">AI EdTech Global Hackathon & Innovation Showcase</h3>
-                        <p class="news-excerpt">Ajang kompetisi 48 jam membongkar tantangan pendidikan global dengan membangun agen AI cerdas bersama mentor internasional.</p>
-                        <button class="read-more-btn article-dropdown-btn">
-                            <span>Baca Selengkapnya</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
-                        </button>
-
-                        <!-- Expanded Accordion Details -->
-                        <div class="news-full-details">
-                            <h4><i class="fas fa-code"></i> Tantangan Hackathon 48 Jam</h4>
-                            <p>Peserta berkompetisi dalam tim (2 - 4 orang) untuk menciptakan purwarupa aplikasi atau agen otonom AI yang memecahkan kesenjangan mutu pendidikan di daerah terpencil.</p>
-                            
-                            <h4><i class="fas fa-award"></i> Kategori & Total Hadiah $50,000:</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> <strong>Track 1: AI Personalized Tutor for Remote Schools</strong> (Juara 1: $20,000 + Inkubasi).</li>
-                                <li><i class="fas fa-check"></i> <strong>Track 2: Multimodal Learning Tools for Students with Disabilities</strong> (Juara 1: $15,000).</li>
-                                <li><i class="fas fa-check"></i> <strong>Fasilitas Peserta</strong>: Makan & akomodasi 48 jam, akses GPU H100 cloud gratis, dan mentorship 1-on-1 bersama pakar Silicon Valley.</li>
-                            </ul>
-
-                            <div class="news-details-footer">
-                                <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-users"></i> Terbuka untuk Umum & Mahasiswa</span>
-                                <a href="pendaftaran.html" class="news-cta-btn"><i class="fas fa-laptop-code"></i> Daftar Tim Hackathon</a>
                             </div>
                         </div>
                     </div>
@@ -473,9 +483,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Artificial Intelligence and Education Global Academy Denpasar. All Rights Reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Kebijakan Privasi</a>
+                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
                     <span class="dot">•</span>
-                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
                 </div>
             </div>
         </div>
@@ -489,6 +499,25 @@
                 <button class="modal-close" id="loginClose">&times;</button>
             </div>
             <div class="modal-body">
+                <!-- 1-Click Demo Login in Modal -->
+                <div style="background: rgba(14, 165, 233, 0.08); border: 1px dashed rgba(14, 165, 233, 0.35); border-radius: var(--radius-sm); padding: 10px 12px; margin-bottom: 16px;">
+                    <div style="font-size: 0.76rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+                        <span><i class="fas fa-magic"></i> Akun Demo Cepat (1-Klik):</span>
+                        <span style="color: var(--text-muted); font-weight: 500;">Pilih untuk isi otomatis</span>
+                    </div>
+                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                        <button type="button" class="demo-chip-btn" data-demo="student" style="flex:1; padding: 6px 10px; font-size: 0.76rem; color: var(--primary-dark); background: #fff; border: 1px solid var(--border-color);">
+                            <span><i class="fas fa-user-graduate" style="color:var(--primary-blue);"></i> Student</span>
+                        </button>
+                        <button type="button" class="demo-chip-btn" data-demo="mentor" style="flex:1; padding: 6px 10px; font-size: 0.76rem; color: var(--primary-dark); background: #fff; border: 1px solid var(--border-color);">
+                            <span><i class="fas fa-chalkboard-teacher" style="color:#6366F1;"></i> Mentor</span>
+                        </button>
+                        <button type="button" class="demo-chip-btn" data-demo="admin" style="flex:1; padding: 6px 10px; font-size: 0.76rem; color: var(--primary-dark); background: #fff; border: 1px solid var(--border-color);">
+                            <span><i class="fas fa-user-shield" style="color:#10B981;"></i> Admin</span>
+                        </button>
+                    </div>
+                </div>
+
                 <form id="loginForm">
                     <div class="form-group">
                         <label for="username">Email / Student ID / NIP</label>
@@ -499,9 +528,12 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Kata Sandi</label>
-                        <div class="input-with-icon">
+                        <div class="input-with-icon input-password-wrapper">
                             <i class="fas fa-lock"></i>
                             <input type="password" id="password" placeholder="Masukkan Kata Sandi" required>
+                            <button type="button" class="toggle-password-btn" title="Lihat Kata Sandi">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="form-group">
@@ -515,7 +547,10 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-block btn-search">Masuk Portal</button>
+                    <button type="submit" class="btn btn-block btn-search" style="background: linear-gradient(135deg, var(--primary-blue) 0%, #1D4ED8 100%); color:#fff; font-weight:700; padding:12px; border-radius: var(--radius-sm);">
+                        <span>Masuk Portal Akademi</span>
+                        <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+                    </button>
                     <div class="modal-footer-links" style="margin-top: 16px; text-align: center; font-size: 0.88rem; color: var(--text-muted);">
                         <span>Belum punya akun? <a href="register.html" style="color: var(--primary-blue); font-weight: 700;">Daftar Sekarang</a> atau buka <a href="login.html" style="color: var(--primary-blue); font-weight: 700;">Portal Login Penuh</a></span>
                     </div>
