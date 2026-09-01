@@ -1529,6 +1529,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Tata Tertib / Rules Accordion Controller
+    const rulesCards = document.querySelectorAll('.rules-card');
+    rulesCards.forEach(card => {
+        const header = card.querySelector('.rules-card-header');
+        if (header) {
+            header.addEventListener('click', () => {
+                const isOpen = card.classList.contains('active');
+                card.classList.toggle('active', !isOpen);
+            });
+        }
+    });
+
 
     /* --- 10. Unified Contact & Support Portal Interactivity --- */
     // Dual-Mode Form Tabs (Inquiry vs Technical Support Ticket)

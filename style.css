@@ -99,22 +99,22 @@ button, input, select, textarea {
 }
 
 .navbar-container {
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 12px 24px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 28px;
+    gap: 14px;
 }
 
 .brand-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
     flex-shrink: 0;
-    margin-right: 8px;
+    margin-right: 4px;
     transition: transform 0.2s ease;
 }
 
@@ -136,9 +136,9 @@ button, input, select, textarea {
 }
 
 .brand-logo-img, .logo-img {
-    height: 42px;
-    width: 42px;
-    max-height: 42px;
+    height: 40px;
+    width: 40px;
+    max-height: 40px;
     object-fit: contain;
     border-radius: 10px;
     background: #FFFFFF;
@@ -162,21 +162,21 @@ button, input, select, textarea {
 }
 
 .brand-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 800;
     color: #FFFFFF;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
     line-height: 1.15;
     text-transform: uppercase;
 }
 
 .brand-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 700;
     color: var(--accent-cyan, #38BDF8);
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
     text-transform: uppercase;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 /* --- Desktop Nav Links --- */
@@ -189,7 +189,7 @@ button, input, select, textarea {
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 2px;
 }
 
 .nav-item {
@@ -199,12 +199,12 @@ button, input, select, textarea {
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 8px 10px;
-    font-size: 0.86rem;
+    gap: 4px;
+    padding: 7px 8px;
+    font-size: 0.83rem;
     font-weight: 600;
     color: #CBD5E1;
-    border-radius: 8px;
+    border-radius: 6px;
     white-space: nowrap;
     transition: var(--transition);
 }
@@ -296,38 +296,39 @@ button, input, select, textarea {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     flex-shrink: 0;
-    margin-left: 20px;
+    margin-left: 8px;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 9px 20px;
-    font-size: 0.88rem;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 0.84rem;
     font-weight: 700;
     border-radius: var(--radius-pill);
     cursor: pointer;
     transition: var(--transition);
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .btn-login {
     background: rgba(255, 255, 255, 0.08);
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.22);
-    padding: 8px 18px;
-    font-size: 0.86rem;
+    padding: 7px 14px;
+    font-size: 0.82rem;
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-login i {
     color: var(--accent-cyan, #38BDF8);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: transform 0.25s ease;
 }
 
@@ -346,8 +347,8 @@ button, input, select, textarea {
 .btn-contact, .btn-register-nav {
     background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
     color: #FFFFFF;
-    padding: 8px 20px;
-    font-size: 0.86rem;
+    padding: 7px 15px;
+    font-size: 0.82rem;
     font-weight: 700;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
@@ -5369,5 +5370,250 @@ button, input, select, textarea {
     .osis-banner-card,
     .bk-wrapper-card {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   TATA TERTIB & RULES ACCORDION STYLES
+   ========================================== */
+.rules-accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.rules-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.rules-card:hover {
+    border-color: #93C5FD;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+}
+
+.rules-card.active {
+    border-color: var(--primary-blue);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+}
+
+.rules-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 24px;
+    cursor: pointer;
+    user-select: none;
+    background: #FAFAFA;
+    transition: background 0.25s ease;
+    gap: 16px;
+}
+
+.rules-card.active .rules-card-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.rules-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+}
+
+.rules-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+.rules-icon-box.icon-cyan {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0284C7;
+    border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.rules-icon-box.icon-purple {
+    background: rgba(147, 51, 234, 0.12);
+    color: #7E22CE;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.rules-icon-box.icon-blue {
+    background: rgba(37, 99, 235, 0.12);
+    color: #2563EB;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.rules-icon-box.icon-green {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.rules-title-text {
+    flex: 1;
+}
+
+.rules-tag-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.rules-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0 0 4px 0;
+    line-height: 1.35;
+}
+
+.rules-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.45;
+}
+
+.rules-toggle-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-size: 0.9rem;
+}
+
+.rules-card.active .rules-toggle-btn {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+    border-color: var(--primary-blue);
+    transform: rotate(180deg);
+}
+
+.rules-card-body {
+    display: none;
+    padding: 24px 26px 28px 26px;
+    background: #FFFFFF;
+}
+
+.rules-card.active .rules-card-body {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.rules-intro-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--bg-light);
+    border-left: 3.5px solid var(--primary-blue);
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.rules-intro-box i {
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    transition: var(--transition);
+}
+
+.rule-item.rule-allowed {
+    background: rgba(16, 185, 129, 0.03);
+    border-color: rgba(16, 185, 129, 0.25);
+}
+
+.rule-item.rule-allowed .rule-status-icon {
+    color: #10B981;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.rule-item.rule-forbidden {
+    background: rgba(239, 68, 68, 0.04);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.rule-item.rule-forbidden .rule-status-icon {
+    color: #EF4444;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.rule-item strong {
+    display: block;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.rule-item span {
+    color: #475569;
+}
+
+@media (max-width: 768px) {
+    .rules-card-header {
+        padding: 18px 16px;
+    }
+    .rules-title-wrap {
+        gap: 12px;
+    }
+    .rules-title {
+        font-size: 1rem;
+    }
+    .rules-card-body {
+        padding: 18px 16px;
     }
 }

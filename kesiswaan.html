@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesiswaan & Organisasi Siswa - AI & Education Global Academy Denpasar</title>
+    <meta name="description" content="Pusat Kesiswaan, OSIS & MPK, Ekstrakurikuler, Prestasi Mahasiswa, Beasiswa, Bimbingan Konseling, Tata Tertib, dan Unit Produksi AI Academy Denpasar.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo" id="brandLogo">
+                <img src="Img/Logo.png" alt="AI & Education Global Academy Logo" class="brand-logo-img">
+                <div class="brand-text">
+                    <span class="brand-title">AI & EDUCATION</span>
+                    <span class="brand-subtitle">Global Academy Denpasar</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="kelas.html" class="nav-link">Kelas / Programs <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kelas.html#online"><i class="fas fa-laptop-code"></i> Online Class <span class="dropdown-tag tag-online">Virtual Lab</span></a></li>
+                            <li><a href="kelas.html#offline"><i class="fas fa-building-user"></i> Offline Class <span class="dropdown-tag tag-offline">Denpasar Campus</span></a></li>
+                            <li><a href="kelas.html#schedules"><i class="fas fa-calendar-alt"></i> Jadwal Pelajaran / Schedules</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="profil.html" class="nav-link">Profil <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profil.html#visi-misi"><i class="fas fa-bullseye"></i> Visi & Misi AI Academy</a></li>
+                            <li><a href="profil.html#sejarah"><i class="fas fa-landmark"></i> Tentang Kampus Denpasar</a></li>
+                            <li><a href="profil.html#dewan-pakar"><i class="fas fa-sitemap"></i> Dewan Pakar & Researchers</a></li>
+                            <li><a href="profil.html#fasilitas"><i class="fas fa-server"></i> Fasilitas Supercomputer & Lab</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a href="kesiswaan.html" class="nav-link">Kesiswaan <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kesiswaan.html#osis"><i class="fas fa-users"></i> OSIS & MPK</a></li>
+                            <li><a href="kesiswaan.html#ekskul"><i class="fas fa-puzzle-piece"></i> Ekstrakurikuler</a></li>
+                            <li><a href="kesiswaan.html#prestasi"><i class="fas fa-trophy"></i> Prestasi Siswa</a></li>
+                            <li><a href="kesiswaan.html#beasiswa"><i class="fas fa-graduation-cap"></i> Beasiswa</a></li>
+                            <li><a href="kesiswaan.html#bk"><i class="fas fa-hands-helping"></i> Bimbingan Konseling</a></li>
+                            <li><a href="kesiswaan.html#tatatertib"><i class="fas fa-clipboard-list"></i> Tata Tertib</a></li>
+                            <li><a href="kesiswaan.html#unitproduksi"><i class="fas fa-store"></i> Unit Produksi</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="direktori.html" class="nav-link">Direktori <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="direktori.html#guru"><i class="fas fa-user-tie"></i> Data Instruktur & Mentors</a></li>
+                            <li><a href="direktori.html#siswa"><i class="fas fa-user-graduate"></i> Network Peserta / Alumni</a></li>
+                            <li><a href="direktori.html#mitra"><i class="fas fa-handshake"></i> Mitra Industri Global</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="publikasi.html" class="nav-link">Publikasi <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="publikasi.html#berita"><i class="fas fa-newspaper"></i> Berita AI & EdTech</a></li>
+                            <li><a href="publikasi.html#pengumuman"><i class="fas fa-bullhorn"></i> Seminar & Workshop</a></li>
+                            <li><a href="publikasi.html#agenda"><i class="fas fa-calendar-check"></i> Event AI Summit Bali</a></li>
+                            <li><a href="publikasi.html#galeri"><i class="fas fa-images"></i> Galeri Hackathon</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="pendaftaran.html" class="nav-link">Pendaftaran <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pendaftaran.html#info-ppdb"><i class="fas fa-info-circle"></i> Info Penerimaan Peserta</a></li>
+                            <li><a href="pendaftaran.html#syarat"><i class="fas fa-file-signature"></i> Syarat & Beasiswa</a></li>
+                            <li><a href="pendaftaran.html#alur"><i class="fas fa-route"></i> Alur Pendaftaran Online</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-headset"></i> Contact & Support</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-login" id="openLoginBtn">
+                    <i class="far fa-user"></i> Portal Student
+                </button>
+                <button class="btn btn-contact btn-register-nav" id="openRegisterHubBtn">
+                    <span>Daftar Akun</span> <i class="fas fa-user-plus"></i>
+                </button>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="drawer-brand" style="display: flex; align-items: center; gap: 10px;">
+                <img src="Img/Logo.png" alt="AI Academy Logo" class="brand-logo-img" style="height: 38px;">
+                <div>
+                    <span class="brand-title" style="display: block; font-size: 0.95rem;">AI & EDUCATION</span>
+                    <span class="brand-subtitle" style="font-size: 0.75rem;">Global Academy</span>
+                </div>
+            </div>
+            <button class="drawer-close" id="drawerClose">&times;</button>
+        </div>
+        <div class="drawer-content" id="mobileDrawerContent"></div>
+    </div>
+
+    <!-- Subpage Hero Banner -->
+    <section class="page-hero">
+        <div class="section-container">
+            <div class="welcome-pill" style="margin-bottom: 14px;">
+                <i class="fas fa-user-graduate"></i>
+                <span class="pill-text">Student Affairs & Leadership Center</span>
+            </div>
+            <h1 class="page-hero-title">Kesiswaan & Pengembangan Mahasiswa</h1>
+            <p class="page-hero-subtitle">Wadah aktualisasi kepemimpinan, riset inovatif, prestasi kompetisi global, dan inkubasi talenta masa depan di AI & Education Global Academy Denpasar.</p>
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Kesiswaan</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Section Anchor Nav -->
+    <section class="kesiswaan-quick-nav">
+        <div class="section-container">
+            <div class="quick-nav-pills">
+                <a href="#osis" class="quick-nav-pill active"><i class="fas fa-users"></i> OSIS & MPK</a>
+                <a href="#ekskul" class="quick-nav-pill"><i class="fas fa-puzzle-piece"></i> Ekstrakurikuler</a>
+                <a href="#prestasi" class="quick-nav-pill"><i class="fas fa-trophy"></i> Prestasi</a>
+                <a href="#beasiswa" class="quick-nav-pill"><i class="fas fa-graduation-cap"></i> Beasiswa</a>
+                <a href="#bk" class="quick-nav-pill"><i class="fas fa-hands-helping"></i> Bimbingan Konseling</a>
+                <a href="#tatatertib" class="quick-nav-pill"><i class="fas fa-clipboard-list"></i> Tata Tertib</a>
+                <a href="#unitproduksi" class="quick-nav-pill"><i class="fas fa-store"></i> Unit Produksi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 1: OSIS & MPK
+         ========================================== -->
+    <section class="section-padding" id="osis" style="background: var(--bg-light);">
+        <div class="section-container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag"><i class="fas fa-users-cog"></i> ORGANISASI SISWA</span>
+                    <h2 class="section-title">OSIS & MPK (AI Student Executive Council)</h2>
+                    <p class="section-subtitle" style="max-width: 720px;">Badan eksekutif dan legislatif siswa yang menggerakkan iklim riset kolaboratif, kegiatan sosial berbasis teknologi, serta advokasi mahasiswa.</p>
+                </div>
+            </div>
+
+            <div class="osis-banner-card">
+                <div class="osis-info-col">
+                    <div class="osis-badge"><i class="fas fa-crown"></i> Kabinet "Cakra Inovasi" • Periode 2026/2027</div>
+                    <h3 class="osis-title">Membangun Ekosistem Mahasiswa AI yang Berdaya Saing Global & Beretika</h3>
+                    <p class="osis-desc">OSIS & MPK AI Academy menjadi jembatan resmi antara mahasiswa dengan dewan pimpinan, industri teknologi, dan komunitas open-source global melalui inisiatif program kerja nyata.</p>
+                    
+                    <div class="osis-highlights-grid">
+                        <div class="osis-highlight-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div>
+                                <h4>AI Hackfest Kampus</h4>
+                                <p>Kompetisi coding & ideation internal setiap semester dengan total hadiah pendanaan proyek.</p>
+                            </div>
+                        </div>
+                        <div class="osis-highlight-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <div>
+                                <h4>AI Peduli Sosial</h4>
+                                <p>Pelatihan literasi digital dan pengenalan coding gratis untuk sekolah-sekolah di pelosok Bali.</p>
+                            </div>
+                        </div>
+                        <div class="osis-highlight-item">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h4>Forum Aspirasi Terbuka</h4>
+                                <p>Kanal diskusi 24/7 dan evaluasi fasilitas komputasi lab bersama pengurus akademi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="osis-structure-col">
+                    <div class="structure-card-header">
+                        <h4><i class="fas fa-sitemap"></i> Struktur Pimpinan OSIS & MPK</h4>
+                    </div>
+                    <div class="structure-list">
+                        <div class="structure-item">
+                            <div class="structure-avatar"><i class="fas fa-user-tie"></i></div>
+                            <div class="structure-info">
+                                <span class="structure-role">Ketua OSIS (President)</span>
+                                <h5>Kadek Arya Pratama</h5>
+                                <span class="structure-prog">Program: Advanced AI & Deep Learning</span>
+                            </div>
+                        </div>
+                        <div class="structure-item">
+                            <div class="structure-avatar"><i class="fas fa-user-shield"></i></div>
+                            <div class="structure-info">
+                                <span class="structure-role">Wakil Ketua OSIS (Vice President)</span>
+                                <h5>Ni Putu Jessica Maharani</h5>
+                                <span class="structure-prog">Program: Computer Vision & Robotics</span>
+                            </div>
+                        </div>
+                        <div class="structure-item">
+                            <div class="structure-avatar"><i class="fas fa-gavel"></i></div>
+                            <div class="structure-info">
+                                <span class="structure-role">Ketua MPK (Head of Legislative)</span>
+                                <h5>Muhammad Rizky Fadhilah</h5>
+                                <span class="structure-prog">Program: LLM Engineering & Cloud Compute</span>
+                            </div>
+                        </div>
+                        <div class="structure-item">
+                            <div class="structure-avatar"><i class="fas fa-coins"></i></div>
+                            <div class="structure-info">
+                                <span class="structure-role">Sekretaris & Bendahara Umum</span>
+                                <h5>Anindya Putri Saraswati</h5>
+                                <span class="structure-prog">Program: AI EdTech & Data Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: EKSTRAKURIKULER & KLUB RISET
+         ========================================== -->
+    <section class="section-padding" id="ekskul" style="background: #FFFFFF;">
+        <div class="section-container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag"><i class="fas fa-puzzle-piece"></i> PENGEMBANGAN MINAT & BAKAT</span>
+                    <h2 class="section-title">Klub Riset & Ekstrakurikuler Pilihan</h2>
+                    <p class="section-subtitle" style="max-width: 720px;">Salurkan passion Anda dalam klub riset berteknologi tinggi, kompetisi esport, keamanan siber, dan seni digital modern dengan bimbingan mentor industri.</p>
+                </div>
+            </div>
+
+            <div class="ekskul-grid">
+                <!-- Ekskul 1: AI Robotics -->
+                <div class="ekskul-card">
+                    <div class="ekskul-badge badge-cyan"><i class="fas fa-robot"></i> Hardware & AI</div>
+                    <div class="ekskul-icon-box"><i class="fas fa-microchip"></i></div>
+                    <h3 class="ekskul-title">AI Robotics & Autonomous Drone Club</h3>
+                    <p class="ekskul-desc">Eksplorasi perakitan robotika cerdas, drone otonom dengan Computer Vision, dan sistem sensor LiDAR untuk navigasi mandiri.</p>
+                    <div class="ekskul-meta">
+                        <span><i class="far fa-calendar-alt"></i> Setiap Sabtu (10.00 WITA)</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Lab Robotika Renon</span>
+                    </div>
+                    <button class="read-more-btn article-dropdown-btn" style="margin-top: 14px;">
+                        <span>Detail Kegiatan & Jadwal</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="news-full-details">
+                        <h4><i class="fas fa-tools"></i> Fasilitas & Proyek Klub:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Perakitan Drone AI pemantau cuaca & agrikultur Bali.</li>
+                            <li><i class="fas fa-check"></i> Akses mikrokontroler NVIDIA Jetson Nano & Raspberry Pi 5.</li>
+                            <li><i class="fas fa-check"></i> Persiapan Kontes Robotika Nasional (KRI) & Internasional.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ekskul 2: Competitive Programming -->
+                <div class="ekskul-card">
+                    <div class="ekskul-badge badge-blue"><i class="fas fa-code"></i> Algorithm & Coding</div>
+                    <div class="ekskul-icon-box"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="ekskul-title">Competitive Programming & Hackathon Squad</h3>
+                    <p class="ekskul-desc">Latihan intensif pemecahan algoritma kompleks, struktur data lanjut, dan simulasi hackathon 48 jam bersama tim Olimpiade Komputer.</p>
+                    <div class="ekskul-meta">
+                        <span><i class="far fa-calendar-alt"></i> Selasa & Kamis (16.00 WITA)</span>
+                        <span><i class="fas fa-globe"></i> Hybrid (Lab & Virtual Hub)</span>
+                    </div>
+                    <button class="read-more-btn article-dropdown-btn" style="margin-top: 14px;">
+                        <span>Detail Kegiatan & Jadwal</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="news-full-details">
+                        <h4><i class="fas fa-trophy"></i> Fokus & Kejuaraan:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pemecahan soal ICPC, Codeforces Div. 1/2, dan LeetCode.</li>
+                            <li><i class="fas fa-check"></i> Mentoring langsung dari mantan juara Olimpiade Sains Nasional.</li>
+                            <li><i class="fas fa-check"></i> Sponsorship penuh biaya tiket delegasi lomba internasional.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ekskul 3: Cyber Security -->
+                <div class="ekskul-card">
+                    <div class="ekskul-badge badge-purple"><i class="fas fa-shield-alt"></i> Security & Ethical Hack</div>
+                    <div class="ekskul-icon-box"><i class="fas fa-user-secret"></i></div>
+                    <h3 class="ekskul-title">Cyber Security & Ethical Hacking (CTF)</h3>
+                    <p class="ekskul-desc">Mempelajari teknik penetration testing, kriptografi modern, digital forensics, dan pertahanan infrastruktur cloud melawan ancaman siber.</p>
+                    <div class="ekskul-meta">
+                        <span><i class="far fa-calendar-alt"></i> Setiap Rabu (15.30 WITA)</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Cyber Defense Lab</span>
+                    </div>
+                    <button class="read-more-btn article-dropdown-btn" style="margin-top: 14px;">
+                        <span>Detail Kegiatan & Jadwal</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="news-full-details">
+                        <h4><i class="fas fa-lock"></i> Silabus & Latihan Praktik:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Simulasi Capture The Flag (CTF) mingguan internal.</li>
+                            <li><i class="fas fa-check"></i> Analisis kerentanan smart contracts & API model AI.</li>
+                            <li><i class="fas fa-check"></i> Sertifikasi Certified Ethical Hacker (CEH) Pathway.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ekskul 4: Game Dev & Esports -->
+                <div class="ekskul-card">
+                    <div class="ekskul-badge badge-orange"><i class="fas fa-gamepad"></i> Game Dev & Esport</div>
+                    <div class="ekskul-icon-box"><i class="fas fa-dice-d20"></i></div>
+                    <h3 class="ekskul-title">Game Development & Esports Analytics</h3>
+                    <p class="ekskul-desc">Pengembangan video game 3D dengan Unreal Engine 5 & Unity, serta penerapan model AI untuk analisis statistik performa atlet esport.</p>
+                    <div class="ekskul-meta">
+                        <span><i class="far fa-calendar-alt"></i> Setiap Jumat (14.00 WITA)</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Studio Multimedia Lt. 2</span>
+                    </div>
+                    <button class="read-more-btn article-dropdown-btn" style="margin-top: 14px;">
+                        <span>Detail Kegiatan & Jadwal</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="news-full-details">
+                        <h4><i class="fas fa-vr-cardboard"></i> Program Unggulan:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pembuatan game berbasis Virtual Reality (VR) dan Gen-AI NPC.</li>
+                            <li><i class="fas fa-check"></i> Turnamen Valorant & Mobile Legends antar-akademi Denpasar.</li>
+                            <li><i class="fas fa-check"></i> Pelatihan publishing game di platform Steam & Epic Games.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ekskul 5: English Debate & MUN -->
+                <div class="ekskul-card">
+                    <div class="ekskul-badge badge-green"><i class="fas fa-globe-americas"></i> Public Speaking</div>
+                    <div class="ekskul-icon-box"><i class="fas fa-microphone-alt"></i></div>
+                    <h3 class="ekskul-title">English Debate & Model United Nations</h3>
+                    <p class="ekskul-desc">Mengasah kemampuan retorika diplomasi internasional, perdebatan etika kecerdasan buatan, dan negosiasi kebijakan global dalam Bahasa Inggris.</p>
+                    <div class="ekskul-meta">
+                        <span><i class="far fa-calendar-alt"></i> Setiap Senin (15.00 WITA)</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Mini Amphitheater</span>
+                    </div>
+                    <button class="read-more-btn article-dropdown-btn" style="margin-top: 14px;">
+                        <span>Detail Kegiatan & Jadwal</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="news-full-details">
+                        <h4><i class="fas fa-certificate"></i> Prestasi & Kegiatan:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Partisipasi Harvard National MUN & Bali International MUN.</li>
+                            <li><i class="fas fa-check"></i> Workshop Academic Writing & AI Ethics Policy Drafting.</li>
+                            <li><i class="fas fa-check"></i> Bimbingan TOEFL/IELTS gratis untuk persiapan studi lanjut luar negeri.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ekskul 6: Digital Arts & Gen-AI -->
+                <div class="ekskul-card">
+                    <div class="ekskul-badge badge-cyan"><i class="fas fa-palette"></i> Creative Media</div>
+                    <div class="ekskul-icon-box"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="ekskul-title">Digital Arts, 3D Design & Gen-Media</h3>
+                    <p class="ekskul-desc">Eksplorasi visual design menggunakan Blender 3D, motion graphic, dan pemanfaatan generative visual AI (Stable Diffusion, Midjourney) untuk industri kreatif.</p>
+                    <div class="ekskul-meta">
+                        <span><i class="far fa-calendar-alt"></i> Setiap Sabtu (13.00 WITA)</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Design Lab GPU Station</span>
+                    </div>
+                    <button class="read-more-btn article-dropdown-btn" style="margin-top: 14px;">
+                        <span>Detail Kegiatan & Jadwal</span> <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="news-full-details">
+                        <h4><i class="fas fa-photo-video"></i> Karya & Output:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pameran karya seni digital tahunan di Galeri Kampus.</li>
+                            <li><i class="fas fa-check"></i> Pelatihan 3D Character Modelling & Motion Tracking.</li>
+                            <li><i class="fas fa-check"></i> Kolaborasi dengan Unit Produksi untuk pembuatan aset komersial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: PRESTASI MAHASISWA / HALL OF FAME
+         ========================================== -->
+    <section class="section-padding" id="prestasi" style="background: var(--bg-light);">
+        <div class="section-container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag"><i class="fas fa-medal"></i> HALL OF FAME</span>
+                    <h2 class="section-title">Prestasi Gemilang Siswa & Mahasiswa</h2>
+                    <p class="section-subtitle" style="max-width: 720px;">Deretan penghargaan dan medali kejuaraan bergengsi tingkat nasional hingga internasional yang diraih oleh mahasiswa AI Global Academy Denpasar.</p>
+                </div>
+            </div>
+
+            <div class="prestasi-grid">
+                <!-- Prestasi 1 -->
+                <div class="prestasi-card gold-tier">
+                    <div class="prestasi-badge"><i class="fas fa-trophy"></i> Gold Medal (Juara 1)</div>
+                    <div class="prestasi-thumb">
+                        <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=800&q=80" alt="Medali Emas International AI Olympiad">
+                    </div>
+                    <div class="prestasi-body">
+                        <span class="prestasi-level"><i class="fas fa-globe"></i> Tingkat Internasional • Tokyo, Jepang</span>
+                        <h3 class="prestasi-title">International AI & Machine Learning Olympiad 2026</h3>
+                        <p class="prestasi-winner"><strong>Pemenang:</strong> Tim "Garuda Neural" (I Made Satria, Kevin Wijaya, Amanda Putri)</p>
+                        <p class="prestasi-desc">Meraih Juara 1 Dunia dengan inovasi model AI deteksi dini penyakit tanaman pangan berbasis satelit dan Edge Computing.</p>
+                    </div>
+                </div>
+
+                <!-- Prestasi 2 -->
+                <div class="prestasi-card gold-tier">
+                    <div class="prestasi-badge"><i class="fas fa-trophy"></i> Juara 1 Nasional</div>
+                    <div class="prestasi-thumb">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Juara 1 National EdTech Hackathon">
+                    </div>
+                    <div class="prestasi-body">
+                        <span class="prestasi-level"><i class="fas fa-flag"></i> Tingkat Nasional • Jakarta</span>
+                        <h3 class="prestasi-title">National EdTech Innovation Hackathon Kemendikbud 2026</h3>
+                        <p class="prestasi-winner"><strong>Pemenang:</strong> Ni Kadek Sintya Dewi & Tim Autonomous EdTech</p>
+                        <p class="prestasi-desc">Mengembangkan platform tutor cerdas berbasis Large Language Model offline untuk sekolah-sekolah di wilayah 3T.</p>
+                    </div>
+                </div>
+
+                <!-- Prestasi 3 -->
+                <div class="prestasi-card silver-tier">
+                    <div class="prestasi-badge"><i class="fas fa-medal"></i> Silver Award (Juara 2)</div>
+                    <div class="prestasi-thumb">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Juara 2 Cyber Security CTF">
+                    </div>
+                    <div class="prestasi-body">
+                        <span class="prestasi-level"><i class="fas fa-globe-asia"></i> Tingkat Asia Pasifik • Singapore</span>
+                        <h3 class="prestasi-title">Asia-Pacific Cyber Security CTF Championship 2026</h3>
+                        <p class="prestasi-winner"><strong>Pemenang:</strong> Tim "CyberShield Denpasar" (Gede Bagus Mahendra & Fajar Ramadhan)</p>
+                        <p class="prestasi-desc">Menyelesaikan seluruh tantangan reverse engineering dan kriptografi dalam waktu tercepat ke-2 se-Asia Pasifik.</p>
+                    </div>
+                </div>
+
+                <!-- Prestasi 4 -->
+                <div class="prestasi-card gold-tier">
+                    <div class="prestasi-badge"><i class="fas fa-award"></i> Best Research Paper</div>
+                    <div class="prestasi-thumb">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Best Research Paper IEEE">
+                    </div>
+                    <div class="prestasi-body">
+                        <span class="prestasi-level"><i class="fas fa-scroll"></i> Tingkat Internasional • IEEE Conference</span>
+                        <h3 class="prestasi-title">Best Student Research Paper on AI Ethics 2026</h3>
+                        <p class="prestasi-winner"><strong>Pemenang:</strong> Komang Wisnu Wardhana, S.Kom.</p>
+                        <p class="prestasi-desc">Mempublikasikan kerangka kerja tata kelola transparansi model Generative AI yang diadopsi oleh institusi riset Asia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: BEASISWA KESISWAAN
+         ========================================== -->
+    <section class="section-padding" id="beasiswa" style="background: #FFFFFF;">
+        <div class="section-container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag"><i class="fas fa-graduation-cap"></i> DUKUNGAN PENDIDIKAN</span>
+                    <h2 class="section-title">Skema Beasiswa & Akselerasi Bakat</h2>
+                    <p class="section-subtitle" style="max-width: 720px;">Kami percaya kendala finansial tidak boleh membatasi talenta hebat dalam meraih masa depan gemilang di bidang kecerdasan buatan.</p>
+                </div>
+            </div>
+
+            <div class="beasiswa-cards-grid">
+                <!-- Beasiswa 1 -->
+                <div class="beasiswa-tier-card popular">
+                    <div class="beasiswa-badge-top">Paling Populer</div>
+                    <div class="beasiswa-icon"><i class="fas fa-star"></i></div>
+                    <h3 class="beasiswa-title">Beasiswa Talenta AI Penuh (100% Free)</h3>
+                    <div class="beasiswa-coverage">
+                        <span class="beasiswa-val">100%</span>
+                        <span class="beasiswa-label">Bebas Biaya Pendidikan & Lab</span>
+                    </div>
+                    <p class="beasiswa-desc">Diberikan kepada siswa berprestasi di bidang sains, olimpiade matematika, atau coding dengan komitmen riset intensif.</p>
+                    <ul class="beasiswa-features">
+                        <li><i class="fas fa-check"></i> Bebas seluruh SPP & biaya ujian sertifikasi</li>
+                        <li><i class="fas fa-check"></i> Kuota komputasi Virtual Lab GPU H100 tak terbatas</li>
+                        <li><i class="fas fa-check"></i> Tunjangan bulanan & jalur magang industri prioritas</li>
+                    </ul>
+                    <a href="pendaftaran.html#syarat" class="btn btn-block btn-search" style="background: linear-gradient(135deg, var(--primary-blue), #1D4ED8); color: #fff; text-align: center; text-decoration: none; padding: 12px; border-radius: var(--radius-sm); font-weight: 700;">Ajukan Beasiswa Ini</a>
+                </div>
+
+                <!-- Beasiswa 2 -->
+                <div class="beasiswa-tier-card">
+                    <div class="beasiswa-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="beasiswa-title">Beasiswa Hibah Riset Komputasi GPU</h3>
+                    <div class="beasiswa-coverage">
+                        <span class="beasiswa-val">$500/bln</span>
+                        <span class="beasiswa-label">Alokasi Dedicated Cloud GPU</span>
+                    </div>
+                    <p class="beasiswa-desc">Dukungan komputasi akselerator perangkat keras untuk mahasiswa yang tengah mengerjakan tugas akhir, skripsi, atau proyek open-source.</p>
+                    <ul class="beasiswa-features">
+                        <li><i class="fas fa-check"></i> Akses cluster NVIDIA DGX H100 80GB</li>
+                        <li><i class="fas fa-check"></i> Bimbingan teknis bersama Dewan Pakar AI</li>
+                        <li><i class="fas fa-check"></i> Pendanaan publikasi jurnal internasional</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-block btn-outline" style="text-align: center; text-decoration: none; padding: 12px; border-radius: var(--radius-sm); font-weight: 700;">Konsultasi Hibah Riset</a>
+                </div>
+
+                <!-- Beasiswa 3 -->
+                <div class="beasiswa-tier-card">
+                    <div class="beasiswa-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3 class="beasiswa-title">Beasiswa Afirmasi & Inklusi Digital 3T</h3>
+                    <div class="beasiswa-coverage">
+                        <span class="beasiswa-val">Full Subsidy</span>
+                        <span class="beasiswa-label">Laptop & Paket Internet Gratis</span>
+                    </div>
+                    <p class="beasiswa-desc">Program inklusivitas untuk talenta muda dari keluarga prasejahtera dan daerah kepulauan terluar di Indonesia.</p>
+                    <ul class="beasiswa-features">
+                        <li><i class="fas fa-check"></i> Subsidi perangkat laptop programming</li>
+                        <li><i class="fas fa-check"></i> Akses kelas online & materi rekaman selamanya</li>
+                        <li><i class="fas fa-check"></i> Komunitas belajar dan pendampingan 1-on-1</li>
+                    </ul>
+                    <a href="pendaftaran.html#alur" class="btn btn-block btn-outline" style="text-align: center; text-decoration: none; padding: 12px; border-radius: var(--radius-sm); font-weight: 700;">Alur Pendaftaran Afirmasi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: BIMBINGAN KONSELING (BK)
+         ========================================== -->
+    <section class="section-padding" id="bk" style="background: var(--bg-light);">
+        <div class="section-container">
+            <div class="bk-wrapper-card">
+                <div class="bk-content-col">
+                    <span class="section-tag"><i class="fas fa-hands-helping"></i> SUPPORT & WELL-BEING</span>
+                    <h2 class="section-title">Pusat Bimbingan, Konseling & Karir (BK)</h2>
+                    <p class="bk-desc">Kami peduli terhadap kesehatan mental, kenyamanan belajar, dan perencanaan karir masa depan setiap mahasiswa. Tim konselor profesional kami siap mendengarkan dan membimbing Anda secara privat dan rahasia.</p>
+
+                    <div class="bk-services-grid">
+                        <div class="bk-service-box">
+                            <div class="bk-icon"><i class="fas fa-user-friends"></i></div>
+                            <div>
+                                <h4>Konseling Privat 1-on-1</h4>
+                                <p>Sesi konsultasi psikologi, manajemen stres akademik, dan adaptasi lingkungan kampus yang nyaman.</p>
+                            </div>
+                        </div>
+                        <div class="bk-service-box">
+                            <div class="bk-icon"><i class="fas fa-compass"></i></div>
+                            <div>
+                                <h4>Perencanaan Karir Tech</h4>
+                                <p>Review portofolio coding, CV ATS internasional, dan simulasi interview teknis ke Big Tech.</p>
+                            </div>
+                        </div>
+                        <div class="bk-service-box">
+                            <div class="bk-icon"><i class="fas fa-laptop-medical"></i></div>
+                            <div>
+                                <h4>Tele-Counseling Online</h4>
+                                <p>Layanan konsultasi fleksibel via Zoom/Google Meet untuk mahasiswa kelas daring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bk-cta-bar">
+                        <a href="https://wa.me/6281299887766?text=Halo%20Tim%20Konseling%20AI%20Academy,%20saya%20ingin%20jadwalkan%20sesi%20konsultasi." target="_blank" rel="noopener noreferrer" class="btn btn-search" style="background: #10B981; color: #fff; font-weight: 700; padding: 12px 24px; border-radius: var(--radius-sm); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fab fa-whatsapp"></i> Jadwalkan Sesi Konseling Sekarang
+                        </a>
+                        <span style="font-size: 0.84rem; color: var(--text-muted);"><i class="fas fa-lock"></i> 100% Rahasia & Bebas Biaya</span>
+                    </div>
+                </div>
+
+                <div class="bk-image-col">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Konseling Mahasiswa AI Academy" class="bk-featured-img">
+                    <div class="bk-quote-bubble">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Kesehatan mental dan kebahagiaan belajar adalah pondasi utama lahirnya inovasi teknologi yang berdampak luas."</p>
+                        <span>— Tim Konselor & Psikolog AI Academy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: TATA TERTIB & KODE ETIK
+         ========================================== -->
+    <section class="section-padding" id="tatatertib" style="background: #FFFFFF;">
+        <div class="section-container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag"><i class="fas fa-clipboard-list"></i> INTEGRITAS & KEDISIPLINAN</span>
+                    <h2 class="section-title">Tata Tertib & Kode Etik Mahasiswa</h2>
+                    <p class="section-subtitle" style="max-width: 720px;">Pedoman perilaku, integritas akademik penggunaan kecerdasan buatan, dan protokol keselamatan laboratorium untuk menjaga lingkungan belajar yang profesional.</p>
+                </div>
+            </div>
+
+            <div class="rules-accordion-container">
+                <!-- Rule 1: Integritas Akademik & AI Generatif -->
+                <div class="rules-card active">
+                    <div class="rules-card-header">
+                        <div class="rules-title-wrap">
+                            <div class="rules-icon-box icon-cyan">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="rules-title-text">
+                                <span class="rules-tag-badge">Kode Etik 01 • Integritas Akademik</span>
+                                <h3 class="rules-title">Kebijakan Integritas Akademik & Penggunaan AI Generatif</h3>
+                                <p class="rules-subtitle">Prinsip etika coding, sitasi model AI (ChatGPT, Claude, Copilot), dan pencegahan kecurangan.</p>
+                            </div>
+                        </div>
+                        <button class="rules-toggle-btn" aria-label="Buka / Tutup Aturan">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="rules-card-body">
+                        <div class="rules-intro-box">
+                            <i class="fas fa-info-circle"></i>
+                            <span>AI Global Academy mendukung pemanfaatan alat bantu Gen-AI sebagai akselerator produktivitas. Namun, setiap mahasiswa wajib mematuhi batas integritas berikut:</span>
+                        </div>
+                        <ul class="rules-list">
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Kewajiban Transparansi Sitasi AI:</strong>
+                                    <span>Mahasiswa wajib melampirkan disclosure dan prompt log jika menggunakan AI generatif dalam penyusunan laporan riset atau proyek akhir.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Pemahaman Logika Mandiri:</strong>
+                                    <span>Pada sesi evaluasi live coding, mahasiswa harus mampu menjelaskan alur logika setiap baris kode yang ditulis tanpa bantuan asisten AI.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-forbidden">
+                                <div class="rule-status-icon"><i class="fas fa-times-circle"></i></div>
+                                <div>
+                                    <strong>Larangan Keras Plagiarisme & Manipulasi Data:</strong>
+                                    <span>Mengunggah kode karya orang lain tanpa atribusi atau manipulasi data benchmark akan dikenakan sanksi akademis tegas berupa pembatalan nilai dan skorsing.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rule 2: Supercomputer & Virtual Lab GPU -->
+                <div class="rules-card">
+                    <div class="rules-card-header">
+                        <div class="rules-title-wrap">
+                            <div class="rules-icon-box icon-purple">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="rules-title-text">
+                                <span class="rules-tag-badge">Kode Etik 02 • Laboratorium & Cloud</span>
+                                <h3 class="rules-title">Tata Tertib Penggunaan Supercomputer & Virtual Lab GPU</h3>
+                                <p class="rules-subtitle">Protokol alokasi VRAM, keamanan kredensial SSH, dan larangan cryptocurrency mining.</p>
+                            </div>
+                        </div>
+                        <button class="rules-toggle-btn" aria-label="Buka / Tutup Aturan">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="rules-card-body">
+                        <div class="rules-intro-box">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Klaster supercomputer NVIDIA DGX H100 merupakan aset bersama untuk pembelajaran dan riset akademik:</span>
+                        </div>
+                        <ul class="rules-list">
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Manajemen Kuota Job Scheduler:</strong>
+                                    <span>Eksekusi training model besar wajib menggunakan sistem SLURM Queue dengan batas waktu alokasi yang disetujui mentor pembimbing.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-forbidden">
+                                <div class="rule-status-icon"><i class="fas fa-times-circle"></i></div>
+                                <div>
+                                    <strong>Dilarang Menjalankan Script Kripto (Mining):</strong>
+                                    <span>Setiap aktivitas penambangan cryptocurrency akan memicu auto-kill process dan pemblokiran akun permanen tanpa toleransi.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Kerahasiaan Kredensial SSH:</strong>
+                                    <span>Kunci akses API dan SSH terminal bersifat privat dan dilarang keras dipindahtangankan kepada pihak di luar akademi.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rule 3: Kehadiran & Tata Busana -->
+                <div class="rules-card">
+                    <div class="rules-card-header">
+                        <div class="rules-title-wrap">
+                            <div class="rules-icon-box icon-blue">
+                                <i class="fas fa-user-clock"></i>
+                            </div>
+                            <div class="rules-title-text">
+                                <span class="rules-tag-badge">Kode Etik 03 • Kedisiplinan & Profesionalitas</span>
+                                <h3 class="rules-title">Kedisiplinan Kehadiran & Tata Cara Berbusana Kampus</h3>
+                                <p class="rules-subtitle">Standar kehadiran minimum 80%, etika open-camera kelas daring, dan standar profesional.</p>
+                            </div>
+                        </div>
+                        <button class="rules-toggle-btn" aria-label="Buka / Tutup Aturan">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="rules-card-body">
+                        <div class="rules-intro-box">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Membangun kebiasaan kerja industri profesional dimulai dari kedisiplinan harian:</span>
+                        </div>
+                        <ul class="rules-list">
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Tingkat Kehadiran Minimum 80%:</strong>
+                                    <span>Syarat mutlak untuk kelulusan program dan keikutsertaan dalam ujian sertifikasi industri internasional.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Pakaian Smart Casual:</strong>
+                                    <span>Rapi, sopan, dan mengenakan sepatu tertutup saat beraktivitas di dalam laboratorium komputer dan ruang seminar.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Etika Kelas Online:</strong>
+                                    <span>Wajib mengaktifkan kamera (open-cam) dan mikrofon interaktif saat sesi diskusi bimbingan live mentoring berlangsung.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rule 4: Anti-Bullying & Lingkungan Inklusif -->
+                <div class="rules-card">
+                    <div class="rules-card-header">
+                        <div class="rules-title-wrap">
+                            <div class="rules-icon-box icon-green">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="rules-title-text">
+                                <span class="rules-tag-badge">Kode Etik 04 • Sikap & Lingkungan Inklusif</span>
+                                <h3 class="rules-title">Lingkungan Kampus Inklusif, Anti-Bullying & Keamanan</h3>
+                                <p class="rules-subtitle">Zero tolerance perundungan, ruang belajar aman, dan penjagaan fasilitas Maker Space.</p>
+                            </div>
+                        </div>
+                        <button class="rules-toggle-btn" aria-label="Buka / Tutup Aturan">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="rules-card-body">
+                        <div class="rules-intro-box">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Akademi menerapkan zero-tolerance policy terhadap segala bentuk perundungan (bullying) dan diskriminasi:</span>
+                        </div>
+                        <ul class="rules-list">
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Saling Menghargai Keberagaman:</strong>
+                                    <span>Menghormati perbedaan latar belakang pengetahuan teknis, suku, agama, dan gender setiap rekan pembelajar.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Menjaga Kebersihan & Peralatan Lab:</strong>
+                                    <span>Tidak membawa makanan/minuman berisiko ke dekat perangkat komputasi, dan mengembalikan inventaris hardware lab ke tempat semula.</span>
+                                </div>
+                            </li>
+                            <li class="rule-item rule-allowed">
+                                <div class="rule-status-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <strong>Kanal Pengaduan Etik 24 Jam:</strong>
+                                    <span>Layanan pengaduan insiden pelanggaran etika dan perundungan dengan jaminan kerahasiaan dan perlindungan penuh bagi pelapor.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: UNIT PRODUKSI & AI STUDENT SOFTWARE HOUSE
+         ========================================== -->
+    <section class="section-padding" id="unitproduksi" style="background: var(--bg-light);">
+        <div class="section-container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag"><i class="fas fa-store"></i> TECHNO-PARK & COMMERCIAL</span>
+                    <h2 class="section-title">Unit Produksi & AI Student Software House</h2>
+                    <p class="section-subtitle" style="max-width: 720px;">Unit inkubasi bisnis komersial di mana mahasiswa mengerjakan proyek perangkat lunak AI berbayar untuk klien industri dan membagikan royalti hasil produksi.</p>
+                </div>
+            </div>
+
+            <div class="unit-produksi-grid">
+                <!-- Proyek 1 -->
+                <div class="unit-proj-card">
+                    <div class="unit-proj-thumb">
+                        <span class="thumb-badge badge-blue">Komersial • Industri Wisata</span>
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Vision AI Terumbu Karang">
+                    </div>
+                    <div class="unit-proj-body">
+                        <h3 class="unit-proj-title">Vision AI Monitoring Terumbu Karang Bali</h3>
+                        <p class="unit-proj-desc">Aplikasi Computer Vision berbasis drone bawah air untuk mendeteksi kesehatan terumbu karang dan populasi biota laut secara otomatis bagi dinas pariwisata.</p>
+                        <div class="unit-proj-tech">
+                            <span>PyTorch</span>
+                            <span>YOLOv10</span>
+                            <span>FastAPI</span>
+                            <span>React</span>
+                        </div>
+                        <div class="unit-proj-footer">
+                            <span class="unit-client"><i class="fas fa-building"></i> Klien: Marine Eco-Tourism Bali</span>
+                            <span class="unit-royalty"><i class="fas fa-percentage"></i> 70% Royalti Siswa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="unit-proj-card">
+                    <div class="unit-proj-thumb">
+                        <span class="thumb-badge badge-green">Komersial • EdTech SaaS</span>
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Chatbot Asisten Belajar Sekolah">
+                    </div>
+                    <div class="unit-proj-body">
+                        <h3 class="unit-proj-title">Smart School RAG Assistant & Exam Evaluator</h3>
+                        <p class="unit-proj-desc">Sistem kecerdasan buatan berbasis LLM untuk evaluasi esai otomatis dan chatbot tanya-jawab kurikulum sekolah yang diadopsi oleh 15 institusi pendidikan mitra.</p>
+                        <div class="unit-proj-tech">
+                            <span>LangChain</span>
+                            <span>Llama-3</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="unit-proj-footer">
+                            <span class="unit-client"><i class="fas fa-school"></i> Klien: Konsorsium Sekolah Swasta</span>
+                            <span class="unit-royalty"><i class="fas fa-percentage"></i> 70% Royalti Siswa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 3 -->
+                <div class="unit-proj-card">
+                    <div class="unit-proj-thumb">
+                        <span class="thumb-badge badge-purple">Merchandise & Hardware</span>
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="3D Printing & Dev Kits">
+                    </div>
+                    <div class="unit-proj-body">
+                        <h3 class="unit-proj-title">AI Academy IoT Dev Kits & 3D Printed Merch</h3>
+                        <p class="unit-proj-desc">Produksi modul mikrokontroler sensor pintar, case 3D print akrilik presisi tinggi, dan official merchandise akademi yang dirancang langsung di Maker Space.</p>
+                        <div class="unit-proj-tech">
+                            <span>ESP32</span>
+                            <span>3D Printing</span>
+                            <span>PCB Design</span>
+                        </div>
+                        <div class="unit-proj-footer">
+                            <span class="unit-client"><i class="fas fa-shopping-bag"></i> Klien: Retail & Komunitas Developer</span>
+                            <span class="unit-royalty"><i class="fas fa-percentage"></i> Profit Sharing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unit-cta-box" style="margin-top: 40px; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-md); padding: 32px 28px; text-align: center; color: #fff;">
+                <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">Punya Ide Proyek atau Ingin Merekrut Tim Unit Produksi Kami?</h3>
+                <p style="color: #94A3B8; max-width: 620px; margin: 0 auto 20px auto; font-size: 0.92rem;">Kami menerima kerjasama pembuatan perangkat lunak AI kustom untuk korporasi, UMKM, dan institusi pemerintahan.</p>
+                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-search" style="background: var(--primary-blue); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: var(--radius-sm); font-weight: 700;">
+                        <i class="fas fa-briefcase"></i> Konsultasi Kerjasama Proyek
+                    </a>
+                    <a href="pendaftaran.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: var(--radius-sm); font-weight: 700;">
+                        <i class="fas fa-user-plus"></i> Gabung Tim Mahasiswa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="Img/Logo.png" alt="AI & Education Logo" class="brand-logo-img" style="height: 40px;">
+                        <span>AI & EDUCATION GLOBAL ACADEMY</span>
+                    </div>
+                    <p class="footer-desc">
+                        Akademi unggulan kecerdasan buatan, machine learning, dan teknologi pendidikan global yang berpusat di Denpasar, Bali.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/6281299887766" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Program & Kelas</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="kelas.html#online">Online Class & Virtual Lab</a></li>
+                        <li><a href="kelas.html#offline">Offline Class Denpasar</a></li>
+                        <li><a href="kelas.html#schedules">Jadwal Kelas AI Terstruktur</a></li>
+                        <li><a href="pendaftaran.html#syarat">Beasiswa Talenta AI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Kesiswaan & Profil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="kesiswaan.html#osis">OSIS & MPK Mahasiswa</a></li>
+                        <li><a href="kesiswaan.html#ekskul">Klub Ekstrakurikuler</a></li>
+                        <li><a href="kesiswaan.html#prestasi">Hall of Fame Prestasi</a></li>
+                        <li><a href="profil.html#visi-misi">Visi & Misi Akademi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4 class="footer-heading">Kampus Denpasar Bali</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Puputan No. 88, Renon, Denpasar, Bali 80234</li>
+                        <li><i class="fas fa-envelope"></i> info@aieducation-global.ac.id</li>
+                        <li><i class="fas fa-phone-alt"></i> +62 (0361) 8945-8899</li>
+                        <li><i class="fab fa-whatsapp"></i> +62 812-9988-7766 (Official Admissions)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI & Education Global Academy Denpasar. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="footer-legal-links">
+                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                    <span class="legal-divider">•</span>
+                    <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
