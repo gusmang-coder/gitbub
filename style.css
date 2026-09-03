@@ -1861,20 +1861,26 @@ button, input, select, textarea {
     transform: translateY(2px);
 }
 
-/* Publication Expanded Card Accordion */
-.news-card.expanded {
+/* Publication & UKM Expanded Card Accordion */
+.news-card.expanded,
+.ekskul-card.expanded,
+.ukm-card.expanded {
     border-color: var(--primary-blue);
     box-shadow: 0 16px 36px rgba(37, 99, 235, 0.15);
     background: #FFFFFF;
 }
 
-.news-card.expanded .read-more-btn {
+.news-card.expanded .read-more-btn,
+.ekskul-card.expanded .read-more-btn,
+.ukm-card.expanded .read-more-btn {
     background: var(--primary-dark);
     color: #FFFFFF;
     border-color: var(--primary-dark);
 }
 
-.news-card.expanded .read-more-btn .dropdown-arrow {
+.news-card.expanded .read-more-btn .dropdown-arrow,
+.ekskul-card.expanded .read-more-btn .dropdown-arrow,
+.ukm-card.expanded .read-more-btn .dropdown-arrow {
     transform: rotate(180deg) !important;
 }
 
@@ -1888,7 +1894,9 @@ button, input, select, textarea {
     line-height: 1.65;
 }
 
-.news-card.expanded .news-full-details {
+.news-card.expanded .news-full-details,
+.ekskul-card.expanded .news-full-details,
+.ukm-card.expanded .news-full-details {
     max-height: 1400px;
     opacity: 1;
     margin-top: 18px;
@@ -1979,8 +1987,8 @@ button, input, select, textarea {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
     margin-bottom: 60px;
 }
 
@@ -2044,35 +2052,52 @@ button, input, select, textarea {
     margin-bottom: 20px;
 }
 
-.footer-menu {
+.footer-menu,
+.footer-links-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-menu a {
+.footer-menu a,
+.footer-links-list a {
     font-size: 0.92rem;
+    color: var(--text-muted, #94A3B8);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
-.footer-menu a:hover {
+.footer-menu a:hover,
+.footer-links-list a:hover {
     color: #FFFFFF;
     padding-left: 6px;
 }
 
-.contact-info-list {
+.contact-info-list,
+.footer-contact-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.contact-info-list li {
+.contact-info-list li,
+.footer-contact-list li {
     display: flex;
     gap: 14px;
     font-size: 0.92rem;
     align-items: flex-start;
 }
 
-.contact-info-list i {
+.contact-info-list i,
+.footer-contact-list i {
     color: var(--accent-cyan);
     margin-top: 4px;
 }
@@ -5216,13 +5241,16 @@ button, input, select, textarea {
     }
 }
 
-/* Ekskul Grid */
+/* UKM / Ekskul Grid */
+.ukm-grid,
 .ekskul-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 24px;
+    align-items: start;
 }
 
+.ukm-card,
 .ekskul-card {
     background: #FFFFFF;
     border: 1.5px solid var(--border-color);
@@ -5232,14 +5260,17 @@ button, input, select, textarea {
     flex-direction: column;
     transition: var(--transition);
     position: relative;
+    height: fit-content;
 }
 
+.ukm-card:hover,
 .ekskul-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-blue);
     box-shadow: var(--shadow-lg);
 }
 
+.ukm-badge,
 .ekskul-badge {
     position: absolute;
     top: 20px;
@@ -5254,6 +5285,7 @@ button, input, select, textarea {
 .badge-cyan { background: rgba(14, 165, 233, 0.12); color: #0284C7; }
 .badge-purple { background: rgba(147, 51, 234, 0.12); color: #7E22CE; }
 
+.ukm-icon-box,
 .ekskul-icon-box {
     width: 52px;
     height: 52px;
@@ -5268,6 +5300,7 @@ button, input, select, textarea {
     margin-bottom: 18px;
 }
 
+.ukm-title,
 .ekskul-title {
     font-size: 1.15rem;
     font-weight: 800;
@@ -5276,6 +5309,7 @@ button, input, select, textarea {
     line-height: 1.35;
 }
 
+.ukm-desc,
 .ekskul-desc {
     font-size: 0.88rem;
     color: var(--text-muted);
@@ -5284,6 +5318,7 @@ button, input, select, textarea {
     flex-grow: 1;
 }
 
+.ukm-meta,
 .ekskul-meta {
     display: flex;
     flex-direction: column;
@@ -5296,12 +5331,14 @@ button, input, select, textarea {
     border-radius: var(--radius-sm);
 }
 
+.ukm-meta span,
 .ekskul-meta span {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
+.ukm-meta i,
 .ekskul-meta i {
     color: var(--primary-blue);
 }

@@ -333,7 +333,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeBtn = document.getElementById(closeBtnId);
         const modal = document.getElementById(modalId);
 
-        if (!modal) return;
+        if (!modal) {
+            if (openBtn) {
+                openBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (openBtnId === 'openLoginBtn') window.location.href = 'login.html';
+                    else if (openBtnId === 'openContactBtn') window.location.href = 'contact.html';
+                });
+            }
+            return;
+        }
 
         if (openBtn) {
             openBtn.addEventListener('click', (e) => {
@@ -1386,18 +1395,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* --- 8. Publication Interactive Dropdown Accordions & News Handling --- */
-    const allNewsCards = document.querySelectorAll('.news-card');
+    /* --- 8. Publication & UKM Interactive Dropdown Accordions --- */
+    const allAccordionCards = document.querySelectorAll('.news-card, .ekskul-card, .ukm-card');
 
-    allNewsCards.forEach(card => {
-        const dropdownBtn = card.querySelector('.read-more-btn');
+    allAccordionCards.forEach(card => {
+        const dropdownBtn = card.querySelector('.read-more-btn, .article-dropdown-btn');
         const fullDetails = card.querySelector('.news-full-details');
-        const originalBtnText = dropdownBtn ? dropdownBtn.querySelector('span')?.textContent || dropdownBtn.textContent.trim() : 'Baca Selengkapnya';
+        const originalBtnText = dropdownBtn ? dropdownBtn.querySelector('span')?.textContent.trim() || dropdownBtn.textContent.trim() : 'Baca Selengkapnya';
 
-        // Toggle function for expanding/collapsing article details
+        // Toggle function for expanding/collapsing details
         function toggleArticle(e) {
             // Do not toggle if clicking directly on a CTA link, form element, or button inside full-details
-            if (e && e.target.closest('.news-cta-btn, .modal-backdrop, form, input, select, textarea')) {
+            if (e && e.target.closest('.news-cta-btn, .modal-backdrop, form, input, select, textarea, .news-full-details')) {
                 return;
             }
 
@@ -1417,9 +1426,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update button text and chevron
             if (dropdownBtn) {
                 const textSpan = dropdownBtn.querySelector('span');
+                const closeText = originalBtnText.toLowerCase().includes('jadwal') ? 'Tutup Detail & Jadwal' : 'Tutup Deskripsi';
                 if (!isExpanded) {
-                    if (textSpan) textSpan.textContent = 'Tutup Deskripsi';
-                    else dropdownBtn.innerHTML = '<span>Tutup Deskripsi</span> <i class="fas fa-chevron-down dropdown-arrow"></i>';
+                    if (textSpan) textSpan.textContent = closeText;
+                    else dropdownBtn.innerHTML = `<span>${closeText}</span> <i class="fas fa-chevron-down dropdown-arrow"></i>`;
                 } else {
                     if (textSpan) textSpan.textContent = originalBtnText;
                     else dropdownBtn.innerHTML = `<span>${originalBtnText}</span> <i class="fas fa-chevron-down dropdown-arrow"></i>`;
